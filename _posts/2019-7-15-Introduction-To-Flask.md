@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction To Flask
-author: Charles
+author: Charles Thomas
 ---
 
 ## What is Flask

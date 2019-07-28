@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Introduction To Flask
+author: Charles Thomas
 ---
 
-# What is Flask
+## What is Flask
 Flask is micro web framework for Python based on Werkzeug and Jinja2 which very simple but still powerful.
 
-# Why Flask?
+## Why Flask?
 
 There are many reasons I like Flask.
 Firstly, Flask is a micro web framework, this means it is not 'batteries included' like frameworks such as Django and therefore does not include other features, such as an ORM, authentication or application structure.
@@ -17,7 +18,7 @@ For example, I like to use Peewee as my ORM and Flask-Login to handle user authe
 
 However, it does include enough for you to easily get started. For example, Flask does include Jinja2 which is a powerful templating language and a simple but flexible routing system (which does not make use of regular expressions which makes it much easier for beginners).
 
-# Setup Flask
+## Setup Flask
 
 For this example, I am going to use Python 3 although the tutorial should be able to easily adjusted to work with Python 2. I am going to assume you have Python 3 and pip installed as it is now bundled with Python 3.
 
@@ -56,7 +57,7 @@ The final step will be to actually install Flask, so run:
 
 And we are done.
 
-# Hello, World
+## Hello, World
 
 Now we have actually installed flask we are going to our customary hello world application. So inside the FlaskTutorial directory we created earlier, create a file called `app.py`, open it in your favourite text editor and type:
 

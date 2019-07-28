@@ -1,6 +1,7 @@
+This is a work in progress
 ## Introduction to Microservices - A reasonable example
 
-I built [VLE](https://github.com/Ottermad/VLE) and the original version of [VLEFrontend](https://github.com/Ottermad/VLEFrontend) as a coursework project and have now converted them to use microservices. The purpose of this blog post is to walk you through setting up this project locally and running it on Kubernetes. Hopefully, this will give you a bit of an insight in how to develop microservicesand how to use Kubernetes and Docker.
+I built [VLE](https://github.com/Ottermad/VLE) and the original version of [VLEFrontend](https://github.com/Ottermad/VLEFrontend) as a coursework project and have now converted them to use microservices. The purpose of this blog post is to walk you through setting up this project locally and running it on Kubernetes. Hopefully, this will give you a bit of an insight in how to develop microservices and how to use Kubernetes and Docker.
 
 ### What are microservices
 Traditionally, software is developed is with what is called the Monolith architecture. What this means is that a single large piece of software is developed with all the features needed. But recently a new approach has become popular - microservices. In a microservice architecture, several smaller programs are created - each with a specific task - then they talk to each other to achieve some overarching task.

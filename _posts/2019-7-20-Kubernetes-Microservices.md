@@ -16,8 +16,7 @@ Kubernetes is a container orchestration system. In order to understand this, we 
 
 In a microservice architecture, each of our services can be bundled in a container (in fact we might have multiple copies of the same container for each service). Now managing these all these containers and enabling these services to talk to each other is the job of Kubernetes. 
 
-### Setup
-
+### Setup
 In order to begin this project you'll need to install Kubectl and Minikube. Kubectl is a command line program for managing Kubernetes clusters and Minikube is a program that sets up a virtual machine with a single node kubernetes cluster on your local machine. 
 
 To install these follow these links: [Install Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/).

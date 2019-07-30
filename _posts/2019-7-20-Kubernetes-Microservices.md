@@ -5,7 +5,6 @@ author: Charles Thomas
 ---
 
 This is a work in progress
-## Introduction to Microservices - A reasonable example
 
 I built [VLE](https://github.com/Ottermad/VLE) and the original version of [VLEFrontend](https://github.com/Ottermad/VLEFrontend) as a coursework project and have now converted them to use microservices. The purpose of this blog post is to walk you through setting up this project locally and running it on Kubernetes. Hopefully, this will give you a bit of an insight in how to develop microservices and how to use Kubernetes and Docker.
 

@@ -14,5 +14,5 @@ My plan is heavily based on Susan Fowler's incredible [article](https://www.susa
 Firstly, to dip my toe in the water I am going to start with Leonard Susskind's series [The Theoretical Minimum](https://theoreticalminimum.com/biography) for two primary reasons: I already own three of the books which I haven't read yet; and I believe doing so will give me a very high level overview of the subject which hopefully will give me an insight in whether I want to continue with my plan.
 Assuming I decide to continue with my plan, I will be following reasonably closely with Susan's plan, however, at the time of writing I am planning to use Mathematical Methods For Physics And Engineering as my main textbook for the mathmatical component of the course - for the simple reason I already posess it. I may also skip some of the early content depending on how familar with it from my A Levels. 
 
-## How can you help?
+## How can you help?
 I would welcome any feedback on my idea, particulary from anyone with Physics or Mathematics background who has any ideas for resources or just general tips or advice.

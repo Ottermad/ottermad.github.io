@@ -1,5 +1,4 @@
 ---
----
 layout: post
 title: Teaching Myself Physics
 author: Charles Thomas

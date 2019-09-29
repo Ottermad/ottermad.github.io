@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Teaching Myself Physics
+title: Teaching Myself A Physics Degree
 author: Charles Thomas
 ---
 

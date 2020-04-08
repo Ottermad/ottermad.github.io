@@ -13,12 +13,11 @@ Now, that I've made some progress I wanted to do a quick review of the Theoretic
 ## Summary
 They're really fast-paced but informative courses that cover a lot of content which plenty of maths. They're great if you already know some maths and physics and you want a survey of some of deeper topics. However, I would not recommend them as someone's first exposure to physics. 
 
-
-### The Pros
+### The pros
 
 * Cover the Material in lots of depth - for example, the Classical Mechanics course includes Lagrangian & Hamiltonian Mechanics. These are topics not usually covered until the second year of university which gives you an idea of how much content these courses.
 * Really clear, intuitive explanations - Professor Susskind has an amazing way of explaining very complex topics in a succinct, easy to understand way 
 
-### The cons
+### The cons
 
 * Uses a lot of maths - this isn't so much of a con as a warning. The courses make use of a decent chunk of maths, including multivariable calculus and linear algebra which if you haven't seen before it can be a bit of shock - you do have to pick it up quickly or be left behind. That being said the books published alongside the courses do include mathematical interludes which depending on your background might be enough. 

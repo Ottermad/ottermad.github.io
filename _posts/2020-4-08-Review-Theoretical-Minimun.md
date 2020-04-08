@@ -4,7 +4,9 @@ title: Reviewing The Theoretical Minimum - An Update on Teaching Myself A Physic
 author: Charles Thomas
 ---
 
-A while ago I [posted](https://ottermad.github.io/2019/09/29/Teaching-Myself-Physics.html) about my idea to try and teach myself a Physics degree. Since then, although progress has been slow, progress has been made. I have completed the [Classical Mechanics](), [Quantum Mechanics]() and [Special Relativity & Classical Field Theory]() courses from Leonard Susskind's The Theoretical Minimum and I am now deep into MIT's OCW [Linear Algebra Course]() (I decided to do this because I realised that I have the textbook and would actually like to finish the course); as well as working my way through University Physics and Mathematical Methods For Physics And Engineering. 
+A while ago I [posted](https://ottermad.github.io/2019/09/29/Teaching-Myself-Physics.html) about my idea to try and teach myself a Physics degree. Since then, although progress has been slow, progress has been made.
+
+I have completed the [Classical Mechanics](https://theoreticalminimum.com/courses/classical-mechanics/2011/fall), [Quantum Mechanics](https://theoreticalminimum.com/courses/quantum-mechanics/2012/winter) and [Special Relativity & Classical Field Theory](https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring) courses from Leonard Susskind's The Theoretical Minimum and I am now deep into MIT's OCW [Linear Algebra Course](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/) (I decided to do this because I realised that I have the textbook and would actually like to finish the course); as well as working my way through University Physics and Mathematical Methods For Physics And Engineering. 
 
 Now, that I've made some progress I wanted to do a quick review of the Theoretical Minimum courses.
 

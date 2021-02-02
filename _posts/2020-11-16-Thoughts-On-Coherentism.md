@@ -1,0 +1,56 @@
+---
+layout: post
+title: Teaching Myself A Physics Degree
+author: Charles Thomas
+---
+
+Knowledge has been defined in the past as justified true belief, formally, that means for subject S to know proposition P then:
+* P must be true
+* S must believe P
+* S must have justification for their belief in P
+
+However, this definition relies on the notion of objective truth which to me does not reflect the way in which we use the term knowledge nor does it provide a useful definition of knowledge. To illustrate the first part let us assume there is an objective reality e.g. there is a real world that exists and that it is the world which we are aware of (no brains in vats or dream skepticism yet). Now consider the proposition of Newton’s Law of Gravitation (which if you’ve forgotten it since high school is F = Gm1m1/r^2); for most people living in the 19th century this statement was considered true and even today unless you have an awareness of General Relativity you might also consider this statement to be true, in fact if you learnt it in school you might even claim to know it. And this doesn’t seem unreasonable. 
+
+However, modern science has shown this statement to be false via empirical observation and we now have a much more sophisticated theory of gravitation, so under the JTB definition it is impossible to know Newton’s Law of Gravitation (of course you could always posit some axioms, derive it from those axioms and then it might be considered true under some logical system but this is not the way most people think of science and we shall address this notion later). So we get a lot of scientific claims that don’t count of knowledge - well maybe that’s just because they’re outdated and we have more modern scientific theories we consider true. 
+
+However, even if we consider our most accurate scientific theories such as the Standard Model we know they are missing parts (such as Quantum Gravity) and as such cannot be true in the strictest sense (although most of us would count the existence of subatomic particles as knowledge). In fact given science is based on the principle of induction it seems we cannot establish the truth of any scientific proposition. To see this think about sunrises: the sun rose yesterday and (depending on when you’re reading this) the sun rose today, yet how do we know the sun will rise tomorrow? We have no guarantee it will rise tomorrow, only the evidence of our past experiences. So this seems to mean we can’t truly claim any scientific statement to be true since they were all formed in the same way. Now this implies under JTB we can’t know any scientific statement which seems very odd (if not absurd) but maybe we should only talk about knowing deductive truths.
+
+Deductive truths are statements that are entailed by some axioms/propositions. Generally, these seem like they must be true, for example, 1 +1 =2. This seems like a statement that must be true, in fact, perhaps we can consider all mathematical statements to be true. However, we run into the problem of how do we know that the axioms we derived them from are true. We can’t prove them in the way we do consequences otherwise they wouldn’t be axioms. In fact lots of interesting and sometimes useful mathematics has come about from removing certain axioms (e.g the development of non Euclidean geometry) So maybe best we can do is establish statements in the form: If X and Y are true then Z must be true. Perhaps these are the only statements we can consider true. 
+
+Yet this seems a very narrow definition of knowledge even if we are assuming an objective reality. If we consider some of the arguments put forward for scepticism, then perhaps we can’t even regard those statements as true. For example, let us consider the Evil Deceiver put forward by Descartes. This being is so powerful it can not only change how we perceive the world through our senses but it can even change the way we think so perhaps when we are forming deductive arguments,the demon forces us to always make a logical slip and then prevents us from ever perceiving it. So there go even our deductive arguments. 
+
+Now, Descartes does argue that in order to be deceived or to even think we might be being deceived there must be some thinking entity ‘I’ and this seems pretty difficult to doubt so maybe we can at least consider the statement ‘I exist’ to be true (although this doesn’t mean our physical reality does, only that our mind in some sense does).
+
+So, if we’re left just ‘I exist’ as being objectively true, then we only have only one piece of knowledge hence we have a very unhelpful definition of knowledge that certainly doesn’t reflect how we use the term in most, if any, contexts. Hence it appears to me the notion of truth does appear to be helpful when working with knowledge, so let’s remove it and try to recover a more helpful definition of knowledge. 
+
+Without the notion of objective truth we’re know just left with S knows P if:
+* S believes P
+* S has justification for believing P
+If we’re throwing out the idea of objective truth we should stop for a moment and consider what it means for S to believe P. 
+
+S believes P means that the person/thinking entity (since within this paper we haven’t necessarily got a physical reality) S within their own mind takes P to be true. This might not reflect the world they perceive or the real world if there is such one but for them P is true.
+
+So that leaves us with what does it mean for S to have justification to believe P. Usually it means S has some evidence for P, for example I might believe it is 2o’clock because I can see my watch and my watch says it is two o’clock. However, without the notion of objective reality, our notion of evidence has to change a bit. I may or may not be able to establish that my watch actually exists and that it says 2 o’clock and that accurately reflects the relationship between the sun and the earth. What I can say is that I have a belief that I see my watch and it says two o’clock. This means our concept of justification is about the relationship between beliefs. My belief that I can see my watch and it says two o’clock leads to/supports my belief it is two o’clock. One might even go as far to say my beliefs are coherent. 
+
+The notion of coherence is a bit fiddly. One simple idea of it is about whether one belief pimples another. For example, the belief I can see my watch and it says two o’clock leads implies that it is two o’clock. But if I have a third belief that I can see my phone and it says the time is three o’clock then I have a contradiction in the belief that it is two o’clock since I have a piece of evidence that undermines my belief that it is two o’clock. However, if I have the belief my phone is set to the wrong time zone then my beliefs are consistent with each other again.
+
+This can be formalized in the following way. If I believe P on the basis of  Q then I am justified in believing P.  Unless I also have a belief R which undermines Q. (R is known as the defeater of Q) You can think of a belief and a defeater cancelling each other out. So I believe Q and R then they cancel each other out and I have no justification for P. This means for I can believe P based on a set of beliefs S as long as I don’t have a defeater for at least one element in S e.g. I have some evidence for P that isn’t undermined by any of my other beliefs.
+
+However, this notion has some problems. In particular it assumes my beliefs either imply each other or they don’t and that one belief cancels out another. This is not quite the case in the real world, for example, my seeing my watch and reading it as saying 2 o’clock doesn’t necessarily imply that it is two o’clock it only adds evidence to the belief that it is 2 o’clock. Additionally, for some belief P, I might have some evidence for it and some evidence against it. I might decide that the evidence for it is stronger that the evidence against it so take my belief P to be coherent with the rest of my beliefs (this is different to the case above where I have beliefs Q and S in favour of P but R as a defeater of Q; instead this is the case where I have Q and defeater R but decide R doesn’t complete defeat Q). 
+
+Another problem it has is that it can lead to the problem of infinite regress, if I don’t either establish some beliefs that don’t have justification that I can use to support my other beliefs.
+
+Instead I propose the notion of the thinking of my beliefs of a set of points and with arrows between two points if one supports the other e.g. if P supports Q then an arrow goes from P to Q - it may go the other way but it does not have to. (For those mathematical readers I am thinking of knowledge as a directed graph). Each arrow also has a weight/thickness associated with it. If the arrow from P to Q is very thick/has a large weight then P really supports Q, if the connection is weaker, then the arrow is thinner. If a belief/node has lots of thick arrows going into it then I can say that it is justified
+
+This avoids infinite regress by allowing two beliefs, P and Q to support each other. What matters is that P  supports Q and Q supports P - I don’t need some kind of ground belief as an unjustified starting point.
+
+Under this new idea we can recover scientific knowledge as it is usually spoken about. I have lots of evidence for my belief in gravity and even if I have some evidence against it I can still talk about having knowledge of gravity as I have justification for it.
+
+However, this does suffer from the problem that if a person holds a set of beliefs that are coherent with each other but not with other people’s beliefs, we generally don’t consider them to have knowledge. I believe that we can solve this by instead of considering the society to which a person belongs rather than the individual. If we consider the set of beliefs of a society then when working out whether a person has knowledge we can rule out those cases where people have beliefs that the rest of us consider absurd. 
+
+Now this leads to two problems. The first is how to choose which society someone belongs to. I would argue the answer to consider to find the widest possible society which the person exists in (which for the majority of the people is most of the world given the rise of the internet and globalisation). This can also be carefully applied to historical contexts as you must think about which groups of people would have been able to communicate with each other.
+
+The second problem is that beliefs within a small community may not be counted as knowledge, this means many religious statements may not be considered knowledge as they are not coherent with other’s views. More oddly  during the development stage of scientific theories the developers may not be considered to have knowledge until the wider community has adopted it. However, while initially odd I believe it makes sense as only when justification across society is reached does it count as knowledge.
+
+Therefore, I think this version of coherentism provides a better alternative to knowledge than the JTB and it does not depend on the notion of objective truth so allows us to talk about knowledge regardless of skeptical arguments. 
+

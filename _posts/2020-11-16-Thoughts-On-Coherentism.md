@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Teaching Myself A Physics Degree
+title: Thoughts On Coherentism 
 author: Charles Thomas
 ---
 

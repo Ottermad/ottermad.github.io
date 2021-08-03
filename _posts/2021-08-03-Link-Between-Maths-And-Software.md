@@ -10,7 +10,7 @@ People are often put off software engineering because there are parts of it that
 
 However, there are more general similarities between maths and software engineering that are best illustrated by example - so let's start by talking about object-oriented programming and interfaces. 
 
-In object-oriented programming (OOP), we define classes that are made up of two things: attributes which are pieces of data and methods which are functions that manipulate that data. Objects are then instances of that class. To make this a bit clearer let's look at an example. Imagine I want to model a car in code, I might define a car class with the attributes: colour, make, fuel level and speed and then the method drive that increases speed and decreases fuel. 
+In object-oriented programming (OOP), we define classes that are made up of two things: attributes which are pieces of data and methods which are functions which manipulate that data. Objects are then instances of that class. To make this a bit clearer let's look at an example. Imagine I want to model a car in code, I might define a car class with the attributes: colour, make, fuel level and speed and then the method drive that increases speed and decreases fuel. 
 
 ```
 class Car {
@@ -33,14 +33,14 @@ car1 = Car(colour: red, make: Volvo);
 car2 = Car(colour: blue; make: Honda);
 ```
 
-I can now define functions that accept Cars. So I can create a function that changes that accepts Car objects. 
+I can now define functions that accept Cars:
 ```
 function DriveCar(car: Car) {
 	car.drive();
 }
 ```
 
-Hopefully, you're still with me. So now sometimes I can have classes that all have similarities, for example, I might have a Car class, a Motorbike class and a Bus class, all of which have a Drive method. Now sometimes I want to write a function that can work with anything that has a drives method. This way I don't have to write a DriveCar, DriveMotorbike and DriveBus functions and I can just define a Drive function. Interfaces give us a way to do this.
+Hopefully, you're still with me. So now sometimes you'll have several classes that all have similarities, for example, I might have a Car class, a Motorbike class and a Bus class, all of which have a Drive method. Now sometimes I want to write a function that can work with anything that has a drive method. This way I don't have to write a DriveCar, DriveMotorbike and DriveBus functions and I can just define a Drive function. Interfaces give us a way to do this.
 
 Interfaces allow us to define what behaviour (methods) we expect from a class and then use that interface anywhere we just need that behaviour. So we might define a Vehicle interface that just expects a drive method:
 ```

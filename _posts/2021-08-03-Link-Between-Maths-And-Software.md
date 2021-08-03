@@ -1,3 +1,9 @@
+---
+layout: post
+title: The Link Between Mathematics and Software Engineering
+author: Charles Thomas
+---
+
 Mathematics and software engineering have a tumulous relationship. Some people think you need to be a great mathematician in order to be a great software engineer, others believe you don't need to know any sophisticated maths in order to be an amazing engineer. I think there is some truth to both sides to this argument and in many cases, the reason why people disagree is because of a misunderstanding about what the relevant bits of mathematics are.
 
 People are often put off software engineering because there are parts of it that are mathematically heavy, for example, understanding cryptography does require some topics that aren't normally covered unless you do a mathematics undergrad such as group theory (although I promise with a little bit of graft it's not that scary). And because of these areas, some people argue that you need to be good at maths in order to be a good software engineer. However, the truth is that most software engineers don't spend their time designing cryptographic solutions or working in other mathematically intense areas. So you don't need to know a lot of maths to be able to be a good engineer.

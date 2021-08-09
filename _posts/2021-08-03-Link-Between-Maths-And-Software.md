@@ -40,7 +40,7 @@ function DriveCar(car: Car) {
 }
 ```
 
-Hopefully, you're still with me. So now sometimes you'll have several classes that all have similarities, for example, I might have a Car class, a Motorbike class and a Bus class, all of which have a Drive method. Now sometimes I want to write a function that can work with anything that has a drive method. This way I don't have to write a DriveCar, DriveMotorbike and DriveBus functions and I can just define a Drive function. Interfaces give us a way to do this.
+Hopefully, you're still with me. So now sometimes you'll have several classes that all have similarities, for example, I might have a Car class, a Motorbike class and a Bus class, all of which have a Drive method. Now sometimes I want to write a function that can work with anything that has a drive method. This way I don't have to write a DriveCar, DriveMotorbike and DriveBus functions and I can define a Drive function. Interfaces give us a way to do this.
 
 Interfaces allow us to define what behaviour (methods) we expect from a class and then use that interface anywhere we just need that behaviour. So we might define a Vehicle interface that just expects a drive method:
 ```
@@ -70,13 +70,13 @@ A slightly more complicated example is what is called R^2 and these are the colu
 
 Now in maths, we can construct some much more complicated vectors such as functions or integrals and I can create certain types of vectors by introducing more operations such as the inner (dot) product. But the key is as long as I can prove it works for vectors that property is true for all vectors no matter how complicated they are. 
 
-Hopefully, you've begun to notice that this is very similar to how we use interfaces in programming: we only care about being able to do certain operations on something and not less about how it works [3].
+Hopefully, you've begun to notice that this is very similar to how we use interfaces in programming: we only care about being able to do certain operations on something and not about how it works [3].
 
 To me, this similarity is the key link between mathematics software is the ability to think abstractly about what behaviours we care about at a particular time and is a skill common to both.
 
 Notes:
 
-1) Perhaps I should have talked about inheritance here but I didn't want to any more complexity
+1) Perhaps I should have talked about inheritance here but I didn't want to any add more complexity
 
 2) To the mathematicians out there: I'm aware that there are some more axioms these operations must obey but that is not the purpose of this article
 

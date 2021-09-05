@@ -3,7 +3,6 @@ layout: post
 title: An Introduction To Kafka
 author: Charles Thomas
 ---
-* Idempotency: If a producer writes a message and see a network error it cannot know if this error happened before or after the message was committed. You can turn on a setting so that the broker assigns each producer an ID and deduplicates messages using a sequence number that is sent by the producer along with every message (we can only guarantee idempotent production within a single producer session)
 
 ## What is Kafka?
 Apache Kafka is an events streaming platform. This means it provides 3 keys features: 
@@ -16,7 +15,7 @@ This allows you to move data between differently applications in order to build 
 ## How is Kafka set up?
 Kafka consists of 3 main pieces: 
 * Producers - this is any piece of software that writes data to Kafka - this might be your production application
-* Consumers - this is any piece of software that reads data to Kafka
+* Consumers - this is any piece of software that reads data from Kafka
 * Brokers - these are the servers that store the data e.g. Kafka itself
 
 You can have many copies of each of these. For example, you may have multiple instances of your application that write data to several brokers. Then that data is read from multiple brokers by many copies of your analytics software.
@@ -25,7 +24,7 @@ You can have many copies of each of these. For example, you may have multiple in
 Events (also called messages) in Kafka are the pieces of data you write. Each event belongs to a topic. In our previous example, our events that correspond to a user updating their email could belong to a `user_email_updated` topic.
 
 Within a topic, events are split into partitions. Each event belong to one partition. Partitions have two key properties:
-* They're ordered - within in partition all events are stored and read in a consistent order 
+* They're ordered - within a partition all events are stored and read in a consistent order 
 * They're replicated - we'll cover this below.
 
 ## Replication
@@ -41,6 +40,11 @@ To figure out which partition the message should belong to there are several opt
 Finally, a producer also needs to know which broker is the leader for the partition it wants to write to. Thankfully, each broker keeps a record of the leader for each partition. So a producer only has to contact any broker and ask them.
 
 When a producer writes a message it can choose whether or not to wait for the message to be committed (replicated to the followers). This determined by the acks setting.
+
+## Duplicate messages
+It is possible to write duplicate messages to Kafka. Imagine the case where a producer sends the request to write a message to Kafka. It then crashes before it receives its response. When it restarts it could try and write the message again. In some cases you do not want duplicate messages.
+
+To prevent this you can turn on a setting so that the broker assigns each producer an ID (which is static) and sequence number (which increases over time). When a producer writes a message it sends its ID and sequence number alongside the message. Kafka can then deduplicate messages using that have the same sequence number and producer ID.
 
 ## Reading messages
 Consumers are responsible for reading messages from Kafka. Every consumer belongs a consumer group. A consumer group is responsible for reading a topic (you can have multiple consumer groups consuming the same topic). Each consumer within a consumer group will be assigned a number of partitions and only it will read those partitions. 
@@ -63,6 +67,15 @@ One of the popular reasons to use Kafka is because it allows you to consume mess
 Therefore, it you have a set of messages you want to make sure are consumed in order when you have to make sure they are assigned to the same partition. In practice, this means making sure they all have a common key you can hash to work out what partition they should go to. This is often the ID of entity they're related to. For example, if you are storing a list of changes to a user you might use the user id as the key.s
 
 ## Exactly once
+It is also possible to get "exactly-once" semantics using Kafka. This means you can guarantee that each message will be processed exactly once. This is different to the "at-most-once" or "at-least-once" semantics discussed above. 
+
+To do this you need the ability to process your message and store that you've processed it (normally done by storing the offset) in one operation. This way either you process and store it that you've processed it or you do nothing at all. 
+
+There are several ways to go about this. If you are using the events from Kafka to update a relational database, you could store the offset in the same database. This way you could use a transaction to do your original write and update the offset in one go.
+
+Alternatively, Kafka itself offers the ability to write a group of messages in a transaction. This means you can send several messages to Kafka and either they will all be written or none of them will be. This means if you use Kafka to store the output of your processing and to store your offsets you can also achieve exactly once semantics.
+
+You will also need to have enabled impotency on your writes as discussed above.
 
 ## Further reading
 * https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf

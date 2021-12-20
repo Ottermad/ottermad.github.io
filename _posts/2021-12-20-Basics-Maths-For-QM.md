@@ -4,8 +4,7 @@ title: Basics Maths For Quantum Mechanics
 author: Charles Thomas
 ---
 
-I originally intended to write a blog post on the No Cloning Theorem. But as I was writing it I realised in order to make it accessible I need a mathematical primer that I could point people to. So that is what this is: the bare minimum of maths needed to understand basic quantum mechanics.
-
+I intended to write a blog post on the No Cloning Theorem. But as I was writing it I realised to make it accessible I needed a mathematical primer that I could point people to. So that is what this is: the bare minimum of maths needed to understand basic quantum mechanics.
 
 # Complex Numbers
 A complex number is a number that is written as $$a + bi$$. Where a and b are real numbers (the ones we usually think of when we think about numbers) and $$i$$ is the square root of -1. Some examples of these are $$2 + 3i$$ or $$4 + 7i$$
@@ -32,7 +31,7 @@ $$= 15 + 38i  -24 $$
 $$= -9 + 38i$$
 
 ## Complex Conjugation
-We can do an operation called complex conjugation where we swap the sign of b: so $$a + bi$$ becomes $$a - bi$$. For example, the complex conjugate of $$3 + 4i$$ is $$3 - 4i$$. For a complex number z we will often call its complex conjugate $$z^*$$
+We can do an operation called complex conjugation where we swap the sign of b: so $$a + bi$$ becomes $$a - bi$$. For example, the complex conjugate of $$3 + 4i$$ is $$3 - 4i$$. For a complex number z, we will often call its complex conjugate $$z^*$$
 
 # Vectors
 You can think of vectors as a list of numbers: $$\begin{bmatrix}3 + 4i \\ 5 \\ 2\end{bmatrix}$$
@@ -43,7 +42,7 @@ If two vectors have the same number of elements then we can add them together. W
 $$\begin{bmatrix}3 \\ 7 \\ 2 + 4i\end{bmatrix} + \begin{bmatrix}3 + 4i \\ 5 \\ 2\end{bmatrix} = \begin{bmatrix}6 + 4i \\ 12 \\ 4 + 4i\end{bmatrix}$$
 
 ## Scalar multiplication
-We can a vector bigger or smaller by multiplying it by a number. To do this you just multiply each element of the vector by the number. For example:
+We can a vector bigger or smaller by multiplying it by a number. To do this you multiply each element of the vector by the number. For example:
 
 $$4\begin{bmatrix}3 + 4i \\ 5 \\ 2\end{bmatrix} = \begin{bmatrix}12 + 16i \\ 20 \\ 8\end{bmatrix}$$
 
@@ -53,7 +52,7 @@ If we have two vectors of the same size, a and b, we can also work out the dot p
 $$\begin{bmatrix}3 \\ 8 \\ 1\end{bmatrix} \cdot \begin{bmatrix}7 \\ 2 \\ 9\end{bmatrix} = 3 \times 7 + 8 \times 2 + 1 \times 9 = 21 + 16 + 9 = 46$$
 
 ## Inner products
-If we have two vectors, a and b, we can calculate the inner product between them. We can do this by taking the first element of a, taking its complex conjugate then multiplying by the first element of b. We repeat this for all the elements in a. Finally we add all the numbers we got together. We can write this mathematically as $$\sum{a_i^*b_i}$$
+If we have two vectors, a and b, we can calculate the inner product between them. We do this by taking the first element of a, taking its complex conjugate then multiplying by the first element of b. We repeat this for all the elements in a. Finally, we add all the numbers we got together. We can write this mathematically as $$\sum{a_i^*b_i}$$
 
 Let's work out the inner product between $$\begin{bmatrix}3 + 4i \\ 5 \\ 2\end{bmatrix}$$ and $$\begin{bmatrix}3 \\ 7 \\ 2 + 4i\end{bmatrix}$$ as an example. 
 
@@ -66,13 +65,15 @@ $$= (3-4i) \times 3 + 5 \times 7 + 2 \times (2 + 4i)$$
 $$= 9 -12i + 35 + 4 + 8i = 48 - 4i$$
 
 # Matrices
-A matrix is a grid of numbers. For example: $$\begin{bmatrix}2 & 3 \\ 4 & 5\end{bmatrix}$$. We describe the size of a matrix by the number of rows and columns it has. A matrix with m rows and n columns is called a m by n matrix.
+A matrix is a grid of numbers. For example: $$\begin{bmatrix}2 & 3 \\ 4 & 5\end{bmatrix}$$. We describe the size of a matrix by the number of rows and columns it has. A matrix with m rows and n columns is called an m by n matrix.
 
 If a matrix has the same number of rows and columns it is called a square matrix.
 
 ## Multiplication
-We can multiply two matrices to give another matrix. We can only do this is if the size of the matrices are right. This means to multiply matrices A and B to get AB the number of columns of A must be the same of the number of rows of B.
-The output of this multiplication will be matrix with the same number of rows as A and the same number of columns as B. This means multiplying an m x n matrix with an n x p matrix gives you an m x p matrix.    
+We can multiply two matrices to give another matrix. We can only do this is if the size of the matrices are right. This means to multiply matrices A and B to get AB the number of columns of A must be the same as the number of rows of B.
+The output of this multiplication will be a matrix with the same number of rows as A and the same number of columns as B. 
+
+This means multiplying an m x n matrix with an n x p matrix gives you an m x p matrix.    
 
 To multiply matrices A and B together to get AB, you do each number of the number separately. To work out the number in the ith row and jth column of AB you take the ith row of A and the jth column of B and take the dot product between them. 
 
@@ -97,7 +98,7 @@ If we have two matrices, A and B, and we multiply them together. If the result i
 We can do an operation called the transpose where the rows become columns and the columns become rows.  For example if we have the matrix $$\begin{bmatrix}2 & 3 \\ 4 & 5\end{bmatrix}$$ its transpose is $$\begin{bmatrix}2 & 4 \\ 3 & 5\end{bmatrix}$$
 
 ## Conjugate transpose
-There is another operation called the conjugate tranpose which is where we tranpose the matrix and take the complex conjugate of all the entries. 
+There is another operation called the conjugate transpose. This is where we transpose the matrix and take the complex conjugate of all the entries. 
 
 So  $$\begin{bmatrix}2 + 7i & 3 \\ 4 + 5i  & 5\end{bmatrix}$$ becomes  $$\begin{bmatrix}2 -7i & 4 - 5i  \\ 3 & 5\end{bmatrix}$$
 

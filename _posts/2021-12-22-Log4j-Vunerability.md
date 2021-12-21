@@ -4,15 +4,15 @@ title: Log4j Vulnerability
 author: Charles Thomas
 ---
 
-The other weekend my Twitter blew up with references to some kind of vulnerability in something called Log4j. Based on the number of tweets I saw I assumed it was bad but I had no idea what Log4j was or what had happened. This led me down the rabbit hole of trying to understand what was going on. This post serves to document what I found out.
+The other weekend my Twitter blew up talking about a vulnerability in something called Log4j. Based on the number of tweets I saw I assumed it was bad but I had no idea what Log4j was or what had happened. This led me down the rabbit hole of trying to understand what was going on. This post serves to document what I found out.
 
 # What is Log4j?
-[Log4j](https://logging.apache.org/log4j/2.x/index.html) is a logging library for Java. This means it is used by many applications in Java to write their logs (instead of just printing them with `System.out.println` like I usually do)
+[Log4j](https://logging.apache.org/log4j/2.x/index.html) is a logging library for Java. This means it is used by many applications in Java to write their logs . Instead of printing them with `System.out.println` like I usually do)
 
 # What is the vulnerability in it?
 Part of what made this story hard for me to follow was that several vulnerabilities were found in it in quick succession.
 
-The first one has the catchy name CVE-2021-44228 which allowed attackers to run their code on other people's machines if that machine was using Log4j - this is known as Remote Code Execution (RCE).
+The first one has the catchy name CVE-2021-44228 allowed attackers to run their code on other people's machines if that machine was using Log4j. This is known as Remote Code Execution (RCE).
 
 This was followed by CVE-2021-45046 which discovered that the fix for the original vulnerability was not complete.
 

@@ -4,15 +4,15 @@ title: No Cloning Theorem
 author: Charles Thomas
 ---
 
-In normal computers, we can copy the state of a bit. This is used all for the time, for instance, we might take the output of one operation and feed it into several others (when we do this at the circuit level this is called fanout)
+In normal computers, we can copy the state of a bit. This is used all for the time. For instance, we might take the output of one operation and feed it into several others. When we do this at the circuit level this is called fanout.
 
-However, we cannot do this with Quantum Computers. This is because it is impossible to copy an arbitrary quantum state - a result known as Quantum Computing.
+But, we cannot do this with Quantum Computers. This is because it is impossible to copy an arbitrary quantum state - a result known as Quantum Computing.
 
-This causes problems when it comes to designing quantum circuits as it means we cannot use fanout. It also means we cannot use a common technique for error correction called checkpointing. Checkpointing is where you make a backup of the current state of some value part way through a process so in case it gets corrupted later on you do not have to start the calculation from scratch instead you can resume it from your last checkpoint.
+This causes problems when it comes to designing quantum circuits as we cannot use fanout. It also means we cannot use a common technique for error correction called checkpointing. Checkpointing is where you make a backup of the current state of a value part way through a process.  So that in the case it gets corrupted you do not have to start the calculation from scratch. Instead you can resume it from your last checkpoint.
 
-We generally cannot do this is in a quantum computer because we cannot copy arbitrary quantum states. This is particularly problematic because quantum computers are very sensitive to errors and we've lost one of the major ways we have dealt with errors in traditional computing. Hence, quantum error correction is a very active area of research.
+We generally cannot do this is in a quantum computer because we cannot copy arbitrary quantum states. This is problematic because quantum computers are very sensitive to errors. Hence, quantum error correction is a very active area of research.
 
-Clearly, the no-cloning theorem causes some problems and I found it shocking when I first came across it so I thought I would outline a proof of this theorem in an accessible way. 
+Clearly, the no-cloning theorem causes some problems and I found it shocking when I first came across it.  So I thought I would outline a proof of this theorem in an accessible way. 
 
 
 # Quantum Mechanics Intro
@@ -39,7 +39,9 @@ For our purposes, we can think of having a vector, v, that represents the curren
 The matrix U has to unitary what that means that its inverse is the same as its conjugate transpose. These matrices have the special property that they preserve inner products.
 
 # Proof of no-cloning
-We can do a proof by contradiction by assuming we have some cloning transform C. We know that C is unitary. 
+We are going to do a proof by contradiction.
+
+Let's assume that we have a unitary matrix C that can clone arbitrary quantum states.
 
 Initially have two vectors $$\begin{bmatrix}a \\b\end{bmatrix}$$ and $$\begin{bmatrix}c \\d\end{bmatrix}$$. We want to clone $$\begin{bmatrix}a \\b\end{bmatrix}$$ so we have two copies of it by overwriting $$\begin{bmatrix}c \\d\end{bmatrix}$$.
 
@@ -83,7 +85,7 @@ $$(a^* e + b^* f) = 0$$ or $$(a^* e + b^* f) = 1$$
 
 But this means  $$\begin{bmatrix}a \\b\end{bmatrix}$$ and  $$\begin{bmatrix}e \\f\end{bmatrix}$$ cannot be any two vectors which is a contradiction (specifically it tells us the states are either the same or orthogonal)
 
-Therefore there cannot exist a way of cloning arbitrary quantum states. 
+So there cannot exist a way of cloning arbitrary quantum states. 
 
  
 ## Generalisation of the proof

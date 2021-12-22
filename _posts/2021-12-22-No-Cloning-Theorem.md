@@ -4,20 +4,20 @@ title: No Cloning Theorem
 author: Charles Thomas
 ---
 
-In normal computers we can copy the state of a bit. This is used all for the time, for instance, we might take the output of one operation and feed it into several others (when we do this at the circuit level this is called fanout)
+In normal computers, we can copy the state of a bit. This is used all for the time, for instance, we might take the output of one operation and feed it into several others (when we do this at the circuit level this is called fanout)
 
 However, we cannot do this with Quantum Computers. This is because it is impossible to copy an arbitrary quantum state - a result known as Quantum Computing.
 
-This causes problems when it comes to designing quantum circuits as it means we cannot use fanout. It also means we cannot use a common technique for error correction called check pointing. Check pointing is where you make a backup of the current state of some value part way through a process so in case it gets corrupted later on you do not have to start the calculation from scratch instead you can resume it from your last checkpoint.
+This causes problems when it comes to designing quantum circuits as it means we cannot use fanout. It also means we cannot use a common technique for error correction called checkpointing. Checkpointing is where you make a backup of the current state of some value part way through a process so in case it gets corrupted later on you do not have to start the calculation from scratch instead you can resume it from your last checkpoint.
 
 We generally cannot do this is in a quantum computer because we cannot copy arbitrary quantum states. This is particularly problematic because quantum computers are very sensitive to errors and we've lost one of the major ways we have dealt with errors in traditional computing. Hence, quantum error correction is a very active area of research.
 
-Clearly, the no cloning theorem causes some problems and I found it shocking when I first came across it so I thought I would outline a proof of this theorem in an accessible way. 
+Clearly, the no-cloning theorem causes some problems and I found it shocking when I first came across it so I thought I would outline a proof of this theorem in an accessible way. 
 
 
 # Quantum Mechanics Intro
 
-To do this we need to start with a little bit of quantum mechanics. You might find it useful to checkout my post on the maths need for this [here](https://ottermad.github.io/2021/12/20/Basics-Maths-For-QM.html)
+To do this we need to start with a little bit of quantum mechanics. You might find it useful to check out my post on the maths need for this [here](https://ottermad.github.io/2021/12/20/Basics-Maths-For-QM.html)
 
 ## Representing States
 A qubit is represented by a vector $$\begin{bmatrix}a \\ b\end{bmatrix}$$ where $$a^2 + b^2 = 1$$ and a & b are complex numbers.
@@ -34,11 +34,11 @@ Since measurements reduce any vector to be one of a fixed number of vectors we c
 ## Evolution
 Quantum systems evolve  (change with time) according to unitary transformations. 
 
-For our purposes we can think of having a vector, v, that represents the current state of our systems. It can then change being multiplied by some matrix U to give a new vector, w,  which is the state of the system later on in time.
+For our purposes, we can think of having a vector, v, that represents the current state of our systems. It can then change being multiplied by some matrix U to give a new vector, w,  which is the state of the system later on in time.
 
 The matrix U has to unitary what that means that its inverse is the same as its conjugate transpose. These matrices have the special property that they preserve inner products.
 
-# Proof of no cloning
+# Proof of no-cloning
 We can do a proof by contradiction by assuming we have some cloning transform C. We know that C is unitary. 
 
 Initially have two vectors $$\begin{bmatrix}a \\b\end{bmatrix}$$ and $$\begin{bmatrix}c \\d\end{bmatrix}$$. We want to clone $$\begin{bmatrix}a \\b\end{bmatrix}$$ so we have two copies of it by overwriting $$\begin{bmatrix}c \\d\end{bmatrix}$$.

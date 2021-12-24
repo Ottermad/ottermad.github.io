@@ -4,12 +4,14 @@ title: Deutsch Jozsa Algorithm
 author: Charles Thomas
 ---
 
-The Deutsch Jozsa Algorithm  is a quantum algorithm that solves a problem with little practical applications. But it is notable for being one of the earliest demonstrations of a problem that can be solved faster on quantum computer compared to a classical computer.
+The Deutsch Jozsa Algorithm is a quantum algorithm that solves a problem with few practical applications. It is notable for being one of the earliest demonstrations of a problem that can be solved faster on a quantum computer than on a classical computer.
 
 # The Problem
-Imagine we have a black box (called an oracle) that computes a function that accepts a n bit binary string and returns either 0 or 1.
+Imagine we have a black box (called an oracle) that computes a function that accepts an n-bit binary string and returns either 0 or 1.
 
-We know that the function is either constant (e.g. always returns 1 or always returns 0) or balanced (returns 0 for half the inputs and 1 for other half)
+We know that the function is either:
+* constant (e.g. always returns 1 or always returns 0) 
+* balanced (returns 0 for half the inputs and 1 for the other half)
 
 We want to work out which one the function is using the black box as little as possible.
 
@@ -91,7 +93,7 @@ For example, $$3 \cdot 2 = (1,1) \cdot (1,0) = 1*1 + 1*0 = 1$$
 
 To make it easier we're going to write i and j directly in their binary representations.
 
-We can think of our vectors $$\ket{00},\ket{01}..$$ as column vectors with all zeros apart from in one place. This means they pick out out a column of Hadamard matrix. 
+We can think of our vectors $$\ket{00},\ket{01}..$$ as column vectors with all zeros apart from in one place. This means they pick out a column of the Hadamard matrix. 
 
 For example $$H_2\ket{00}$$ is the first column the Hadamard matrix. So we can write this as:
 
@@ -116,7 +118,7 @@ And finally we can swap the order of sums:
 $$=\frac{1}{4}\sum_{y=00}^{11}\sum_{x=00}^{11}(-1)^{f(x)}(-1)^{x\cdot y}\ket{y}$$ 
 
 ## Making a measurement
-In Quantum Mechanics, when we make a measurement, the probability of getting a result, is the magnitude squared of the coefficient of that state.
+In Quantum Mechanics, when we make a measurement, the probability of getting a result is the magnitude squared of the coefficient of that state.
 
 If we measure our 2 qubits the probability of getting 00 is the magnitude squared of our $$y=\ket{00}$$ component. This is:
 
@@ -130,10 +132,10 @@ Now if $$f(x)$$ is constant then our sum will be $$+4$$ or $$-4$$ which substitu
 
 If f(x) is balanced then our sum will contain 2 -1s and 2 +1s so the total will be 0.
 
-Therefore we'll definitely measure our two qubits to be in the state $$\ket{00}$$ if the function is constant and we'll never measure it to be in $$\ket{00}$$ if the function is balanced.
+So we'll definitely measure our two qubits to be in the state $$\ket{00}$$ if the function is constant and we'll never measure it to be in $$\ket{00}$$ if the function is balanced.
 
 # Building an Oracle
-Now this algorithm relies on us being able to actually construct on our Oracle, so let's discuss how can go out it.
+Now, this algorithm relies on us being able to actually construct on our Oracle, so let's discuss how can go out of it.
 
 ## Oracle for Constant functions
 Our final qubit is in the state: 
@@ -168,7 +170,7 @@ This means we can build a balanced state using CNOT gates.
 
 CNOT gates take in two qubits: if the first bit (known as the control bit) is 0 then it does nothing to the second bit. If the first bit is 1 it flips the second bit.
 
-If we setup a CNOT gate for our first n qubits. For each CNOT the control bit will be one of n qubits and our final qubit will be output bit.
+If we set up a CNOT gate for our first n qubits. For each CNOT the control bit will be one of the n qubits and our final qubit will be the output bit.
 
 Now looking back at our state, if we have an even number of 1s in our input then nothing will change. If we have an odd number of ones we'll end up changing the sign.
 
@@ -182,7 +184,7 @@ $$\frac{1}{2\sqrt{2}}(\ket{00}(\ket{0}-\ket{1}) - \ket{01}(\ket{0}-\ket{1}) - \k
 
 
 # Generalising
-Asssume we n+1 qubits with the first n in the state $$\ket{0}$$ and the final one in the state $$\ket{1}$$ Our combined state is:
+Assume we n+1 qubits with the first n in the state $$\ket{0}$$ and the final one in the state $$\ket{1}$$ Our combined state is:
 
 $$\ket{0}^{\otimes n}\ket{1}$$
 
@@ -192,7 +194,7 @@ Applying a Hadamard gate to each of the first n, we make every possible state eq
 
 $$(\frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^{n-1}}\ket{x}) \otimes \ket{1}$$
 
-Now applying a Hadamard to final qubit in the state $$\ket{1}$$ we get
+Now applying a Hadamard to the final qubit in the state $$\ket{1}$$ we get
 
 $$(\frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^{n-1}}\ket{x}) \otimes \frac{\ket{0}-\ket{1}}{\sqrt{2}}$$
 

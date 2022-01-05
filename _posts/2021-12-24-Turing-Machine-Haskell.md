@@ -9,9 +9,9 @@ As I've been learning Quantum Computing, I've had to learn some Computer Science
 To understand what a Turing Machine was, I decided to write one in Haskell.
 
 # Setting up the project
-To follow along with this project the first thing you'll need to do is get Haskell installed. To do vist [this page](https://www.haskell.org/ghcup/install/) and follow the instructions there to get install and Haskell and Cabal (the Haskell package manager)
+To follow along with this project the first thing you'll need to do is get Haskell installed. To do this visit [this page](https://www.haskell.org/ghcup/install/). And follow the instructions there to install Haskell and Cabal (the Haskell package manager)
 
-Once, you've install Haskell, we need to set up the directory structure we'll be using (take a look at this [Github repo](https://github.com/Ottermad/TuringMachineHaskell) for reference). Create a directory called `TuringMachineHaskell`. This will be the root of our project. 
+Once, you've installed Haskell, we need to set up the directory structure we'll be using (take a look at this [Github repo](https://github.com/Ottermad/TuringMachineHaskell) for reference). Create a directory called `TuringMachineHaskell`. This will be the root of our project. 
 
 Inside that directory create a folder called `src`. Then `src/Setup.hs` and add:
 
@@ -19,12 +19,12 @@ Inside that directory create a folder called `src`. Then `src/Setup.hs` and add:
 import Distribution.Simple
 main = defaultMain
 ```
-Also inside the `src` directory then create a file called `Turing.hs` which is where most of our code will live and add this at the top of the file:
+Also inside the `src` directory create a file called `Turing.hs`.  This is where most of our code will live and add this at the top of the file:
 ```haskell
 module Turing where
 ```
 
-Outside of `src` but still inside `TuringMachineHaskell` create the file `TuringMachineHaskell.cabal` add the following code to set up the tests:
+Outside of `src` but still inside `TuringMachineHaskell` create the file `TuringMachineHaskell.cabal`. Add the following code to set up the tests:
 ```
 cabal-version:       2.4
 
@@ -120,9 +120,12 @@ type Tape = [Symbol]
 ## Instructions
 A Turing machine also has a list of instructions. In a Turing Machine, the instructions have 5 main parts.
 
-The first two parts of instructions are  a symbol and a state. They are used to work out if we should apply an instruction . If the current state of the Turing machine and the current symbol on the tape match these two, then the instruction is applied. 
+The first two parts of the instructions are a symbol and a state. They are used to work out if we should apply an instruction. If the current state of the Turing machine and the current symbol on the tape match these two, then the instruction is applied. 
 
-The three parts of instructions are used when that instruction applied. It is a new state to put the machine into, it is a new symbol to write to the current position on a tape, and finally an indication whether to move the tape forward a square, back a square or to keep it in the same place.
+The three parts of instructions are used when that instruction is applied:
+* A new state to put the machine into
+* Aa new symbol to write to the current position on a tape
+* An indication of whether to move the tape forward a square, back a square or to keep it in the same place.
 
 ```haskell
 data PositionShift = Backwards | Forwards | Stay deriving (Show)
@@ -137,7 +140,7 @@ data Instruction = Instruction {
 ```
 
 ## The Machine
-Now we can represent the turing machine itself. We need to keep track of it all the states it could be in, its current state, the tape and the current position on the tape and the instructions.
+Now we can represent the Turing machine itself. We need to keep track of it all the states it could be in, its current state, the tape and the current position on the tape and the instructions.
 
 ```haskell
 data TuringMachine = TuringMachine { 
@@ -150,7 +153,10 @@ data TuringMachine = TuringMachine {
 ```
 
 # The Logic
-So the first part of the logic of our turing machine, is to look at its current state, if its in halted state we end but if not we try and see if there is an instruction we can process.
+The first part of the logic of our Turing machine is to:
+* Look at its current state
+* If it's in a halted state, end the program
+* If not we try and see if there is an instruction we can process.
 
 ```haskell
 runMachine :: TuringMachine -> TuringMachine
@@ -159,7 +165,7 @@ runMachine machine
     | otherwise  = runMachine (machineCycle machine)
 ```
 
-Here the `machineCycle` is responsible for trying to find a instruction to run, if it finds one, it runs it, otherwise it sets the machine to the Halt state.
+Here the `machineCycle` handles trying to find an instruction to run, if it finds one, it runs it, otherwise it sets the machine to the Halt state.
 
 ```haskell
 machineCycle :: TuringMachine -> TuringMachine
@@ -190,9 +196,9 @@ findInstructionToApply machine instructions
     | otherwise = findInstructionToApply machine (tail instructions)
 ```
 
-If the instructions array is empty it returns 0, otherwise it checks the first instruction in the list. If it should be applied it returns it. Otherwise it calls itself with the remaining instructions.
+If the instructions array is empty it returns 0, otherwise, it checks the first instruction in the list. If it should be applied it returns it. Otherwise, it calls itself with the remaining instructions.
 
-To determine an instruction should be applied we use this function that compares the current state and symbol of the machine to the instruction
+To determine if an instruction should be applied we use this function.  It compares the current state and symbol of the machine to the instruction
 ```haskell
 shouldApplyInstruction :: TuringMachine -> Instruction -> Bool
 shouldApplyInstruction machine instruction = 
@@ -276,12 +282,12 @@ The first instruction takes the machine from the initial state into a state A an
 
 The next two instructions say while our machine is in state A replace any 1 or 0 with a blank and move the tape forward once.
 
-The fourth instruction when it reads its first blank. It sees a blank so we know we're at the end of the input. So we put the machine into state B and moves the tape back one square.
-The instruction then says if we're in state B which happens when we've processed the whole input. If we're on a blank square go backwards. This will set up back the the begining of the tape.
+The fourth instruction is when it reads its first blank. It sees a blank so we know we're at the end of the input. So we put the machine into state B and moves the tape back one square.
+The instruction then says if we're in state B which happens when we've processed the whole input. If we're on a blank square go backwards. This will set up back the beginning of the tape.
 
 The sixth instruction, says if in state B and can see a start symbol (e.g. we're back at the start of the tape) then set the state to C and move forward one square.
 
-The final instruction says write one to the blank sqaure and halt.
+The final instruction says to write one to the blank square and halt.
 
 So in summary, this machine:
 * reads the input replacing the 1s and 0s with blanks until it reaches a blank square (the end of the input)

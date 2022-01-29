@@ -144,7 +144,56 @@ $$F(x) = \frac{1}{1 - x - x^2}$$
 
 
 ## Write as partial fractions
+Using the quadratic formula we solve $$1- x - x^2 = 0$$:
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}=\frac{1 \pm \sqrt{1 + 4}}{-2}=-\frac{1 \pm \sqrt{5}}{2}$$
+
+ so we can factor it into:
+
+$$1- x - x^2 = -(x + \frac{1 + \sqrt{5}}{2})(x + \frac{1 - \sqrt{5}}{2})$$
+
+This means we can write:
+
+$$F(x) = \frac{1}{1 - x - x^2} = -\frac{1}{(x + \frac{1 + \sqrt{5}}{2})(x + \frac{1 - \sqrt{5}}{2})} = - (\frac{A}{x + \frac{1 + \sqrt{5}}{2}} + \frac{B}{x + \frac{1 - \sqrt{5}}{2}})$$
+
+To find A and B we know that:
+
+$$A(x + \frac{1 - \sqrt{5}}{2}) + B(x + \frac{1 + \sqrt{5}}{2}) =1$$
+
+Now substitute in $$x = -\frac{1 - \sqrt{5}}{2}$$:
+
+$$B(-\frac{1 - \sqrt{5}}{2} + \frac{1 + \sqrt{5}}{2}) = B(\sqrt{5}) = 1 \Rightarrow B = \frac{1}{\sqrt{5}}$$
+
+This time substitute in $$x = -\frac{1 +\sqrt{5}}{2}$$:
+
+$$A(-\frac{1 +\sqrt{5}}{2} + \frac{1 - \sqrt{5}}{2}) = 1 \Rightarrow A = -\frac{1}{\sqrt{5}}$$
+
+Putting these values back in we get:
+
+$$F(x) =  -\frac{1}{\sqrt{5}}(-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} + \frac{1}{x + \frac{1 - \sqrt{5}}{2}})$$
+
 
 ## Geometric series
 
+$$\sum_{k=0}^{\infty}ar^k = \frac{a}{1-r}$$
+
+$$-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} = -\frac{1}{x + \frac{1 + \sqrt{5}}{2}}*\frac{\frac{2}{1 + \sqrt{5}}}{\frac{2}{1 + \sqrt{5}}}=-\frac{\frac{2}{1 + \sqrt{5}}}{1+\frac{2}{1 + \sqrt{5}}x}=-\frac{\frac{2}{1 + \sqrt{5}}}{1-(-\frac{2}{1 + \sqrt{5}}x)}$$
+
+$$=-\sum_{k=0}^{\infty}(\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k$$
+
+
+$$\frac{1}{x + \frac{1 - \sqrt{5}}{2}}=\frac{1}{x + \frac{1 - \sqrt{5}}{2}}*\frac{\frac{2}{1-\sqrt{5}}}{\frac{2}{1-\sqrt{5}}}=\frac{\frac{2}{1-\sqrt{5}}}{1+\frac{2}{1-\sqrt{5}}x}=\frac{\frac{2}{1-\sqrt{5}}}{1-(-\frac{2}{1-\sqrt{5}}x)}$$
+
+$$=\sum_{k=0}^{\infty}(\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k$$
+
 ## Factor
+
+$$F(x) = -\frac{1}{\sqrt{5}}(-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} + \frac{1}{x + \frac{1 - \sqrt{5}}{2}})$$
+
+$$=-\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k + \sum_{k=0}^{\infty}(\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k)$$
+
+$$=\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(-\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k + \sum_{k=0}^{\infty}(-\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k)$$
+
+$$=\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(-\frac{2}{1 + \sqrt{5}})^{k+1}(x)^k + \sum_{k=0}^{\infty}(-\frac{2}{1-\sqrt{5}})^{k+1}(x)^k)$$
+
+$$=\frac{1}{\sqrt{5}}(\sum_{k=0}^{\infty}((\frac{2}{1 + \sqrt{5}})^{k+1}- (\frac{2}{1-\sqrt{5}})^{k+1})x^k)$$

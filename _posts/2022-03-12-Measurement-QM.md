@@ -48,13 +48,16 @@ And the state after the measurement is:
 
 $$\frac{M_a\ket{w}}{\sqrt{\bra{w}M^{\dagger}M\ket{w}}}=\frac{M_a\ket{w}}{\sqrt{p(m)}}$$
 
-You can then define an operator called an observable, P, where
-$$P = \sum_n{nM_n}$$ where n is the value of measurement $M_n$
+You can then define an operator called an observable, P
+
+$$P = \sum_n{nM_n}$$ 
+
+where n is the value of measurement $$M_n$$
 
 It should also be noted that each n is an eigenvalue of the observable.
 
 ## Why use projective measurements?
-One reason for doing this is that it makes calculating the average value of a measurement of a particular state. E.g. if I prepare many systems in a state $\ket{w}$ then do measure observable P what will the average/mean of my results be?
+One reason for doing this is that it makes calculating the average value of a measurement of a particular state. E.g. if I prepare many systems in a state $$\ket{w}$$ then do measure observable P what will the average/mean of my results be?
 
 This is called the expectation value. It is is calculated by summing all values of possible results multiplied by the probability of getting them. 
 
@@ -123,11 +126,11 @@ Substituting in $$P_n$$ and U we get
 
 $$\frac{(I_Q \otimes \ket{r_n}\bra{r_n})\sum_{n'}{M_{n'}\ket{r_{n'}}\ket{\phi}}}{\sqrt{p(n)}}$$
 
-Once again by orthogonality and $I_Q$ doing nothing we get:
+Once again by orthogonality and $$I_Q$$ doing nothing we get:
 
 $$\frac{M_n\ket{r_n}\ket{\phi}}{\sqrt{p(n)}}$$
 
-Now put in our result for $p(n)$
+Now put in our result for $$p(n)$$
 
 $$\frac{M_n\ket{r_n}\ket{\phi}}{\sqrt{\bra{\phi}M_n^{\dagger}M_n\ket{\phi}}}$$
 
@@ -148,7 +151,7 @@ To show U is unitary on states of the form $$\ket{\phi}\ket{0}$$ we need to show
 $$\bra{0}\bra{\psi}U^{\dagger}U\ket{\phi}\ket{0}$$
 $$=\sum_{nn'}{\bra{\psi}\bra{r_{n'}}M_{n'}^{\dagger}M_n\ket{r_n}\ket{\phi}}$$
 
-Now we apply the orthonormality of $\ket{r_n}$ to get
+Now we apply the orthonormality of $$\ket{r_n}$$ to get
 
 $$=\sum_n\bra{\psi}M_{n}^{\dagger}M_n\ket{\phi}$$
 

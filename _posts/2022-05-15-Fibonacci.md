@@ -18,7 +18,7 @@ def find_nth_fib(n):
     if n == 2:
         return 1
 
-    return find_nth_fib(n-1) + find_nth_fib(n-1)
+    return find_nth_fib(n-1) + find_nth_fib(n-2)
 ```
 
 # What is it?
@@ -29,15 +29,110 @@ $$
 $$
 
 # Proof of it
-
 ## Define series $$F_n$$
-Proving this starts by defining the following series:
+To prove this formula we'll start by defining the following series:
 
 $$
 F(x) = \sum_{i=0}^{\infty}f_{i+1}x^i
 $$
 
 Where $$f_i$$ is the ith fibonacci number.
+
+
+## Construct other series
+Now let's consider the series: 
+
+$$xF(x) = \sum_{i=0}^{\infty}f_{i+1}x^{i+1}$$ 
+
+and 
+
+$$x^2F(x) = \sum_{i=0}^{\infty}f_{i+1}x^{i+2}$$
+
+## Take difference
+
+Now let's note that
+$$
+F(x) - xF(x) - x^2F(x)
+= F(x)(1 - x - x^2)
+$$
+
+Now let's write this a different way
+
+$$F(x) - xF(x) - x^2F(x)$$
+$$= f_1 + f_2x + f_3x^2 + ... + f_nx^{n-1} - (f_1x + f_2x^2 + f_3x^3 + ... + f_nx^{n}) - (f_1x^2 + f_2x^3 + f_3x^4 + ... + f_nx^{n+1})$$
+$$= f_1 + (f_2 - f_1)x - (f_3 - f_2 - f_1)x^2 + ... + (f_n - f_{n-1} - f_{n-2})x^{n-1}$$
+
+By applying $$f_n = f_{n-1} + f_{n-2}$$ all but the first two terms go to zero leaving:
+
+$$=  f_1 + (f_2 - f_1)x$$
+
+Now apply that $$f_2 = f_1 = 1$$ we get 
+
+$$= 1 + (1-1)x = 1$$
+
+$$F(x) - xF(x) - x^2F(x) = F(x)(1 - x - x^2) = 1$$
+
+Rearranging this gives:
+
+$$F(x) = \frac{1}{1 - x - x^2}$$
+
+
+## Write as partial fractions
+Using the quadratic formula we solve $$1- x - x^2 = 0$$:
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}=\frac{1 \pm \sqrt{1 + 4}}{-2}$$
+
+ so we can factor it into:
+
+$$1- x - x^2 = -(x + \frac{1 + \sqrt{5}}{2})(x + \frac{1 - \sqrt{5}}{2})$$
+
+This means we can write:
+
+$$F(x) = \frac{1}{1 - x - x^2} = -\frac{1}{(x + \frac{1 + \sqrt{5}}{2})(x + \frac{1 - \sqrt{5}}{2})} = - (\frac{A}{x + \frac{1 + \sqrt{5}}{2}} + \frac{B}{x + \frac{1 - \sqrt{5}}{2}})$$
+
+To find A and B we know that:
+
+$$A(x + \frac{1 - \sqrt{5}}{2}) + B(x + \frac{1 + \sqrt{5}}{2}) =1$$
+
+Now substitute in $$x = -\frac{1 - \sqrt{5}}{2}$$:
+
+$$B(-\frac{1 - \sqrt{5}}{2} + \frac{1 + \sqrt{5}}{2}) = B(\sqrt{5}) = 1 \Rightarrow B = \frac{1}{\sqrt{5}}$$
+
+This time substitute in $$x = -\frac{1 +\sqrt{5}}{2}$$:
+
+$$A(-\frac{1 +\sqrt{5}}{2} + \frac{1 - \sqrt{5}}{2}) = 1 \Rightarrow A = -\frac{1}{\sqrt{5}}$$
+
+Putting these values back in we get:
+
+$$F(x) =  -\frac{1}{\sqrt{5}}(-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} + \frac{1}{x + \frac{1 - \sqrt{5}}{2}})$$
+
+
+## Geometric series
+
+$$\sum_{k=0}^{\infty}ar^k = \frac{a}{1-r}$$
+
+$$-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} = -\frac{1}{x + \frac{1 + \sqrt{5}}{2}}*\frac{\frac{2}{1 + \sqrt{5}}}{\frac{2}{1 + \sqrt{5}}}=-\frac{\frac{2}{1 + \sqrt{5}}}{1+\frac{2}{1 + \sqrt{5}}x}=-\frac{\frac{2}{1 + \sqrt{5}}}{1-(-\frac{2}{1 + \sqrt{5}}x)}$$
+
+$$=-\sum_{k=0}^{\infty}(\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k$$
+
+
+$$\frac{1}{x + \frac{1 - \sqrt{5}}{2}}=\frac{1}{x + \frac{1 - \sqrt{5}}{2}}*\frac{\frac{2}{1-\sqrt{5}}}{\frac{2}{1-\sqrt{5}}}=\frac{\frac{2}{1-\sqrt{5}}}{1+\frac{2}{1-\sqrt{5}}x}=\frac{\frac{2}{1-\sqrt{5}}}{1-(-\frac{2}{1-\sqrt{5}}x)}$$
+
+$$=\sum_{k=0}^{\infty}(\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k$$
+
+## Factor
+
+$$F(x) = -\frac{1}{\sqrt{5}}(-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} + \frac{1}{x + \frac{1 - \sqrt{5}}{2}})$$
+
+$$=-\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k + \sum_{k=0}^{\infty}(\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k)$$
+
+$$=\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(-\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k + \sum_{k=0}^{\infty}(-\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k)$$
+
+$$=\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(-\frac{2}{1 + \sqrt{5}})^{k+1}(x)^k + \sum_{k=0}^{\infty}(-\frac{2}{1-\sqrt{5}})^{k+1}(x)^k)$$
+
+$$=\frac{1}{\sqrt{5}}(\sum_{k=0}^{\infty}((\frac{2}{1 + \sqrt{5}})^{k+1}- (\frac{2}{1-\sqrt{5}})^{k+1})x^k)$$
+
+
 
 ## Prove $$Fn$$ converges
 Most of these infinite sums just get infinitely big or infinitely small (we say these sums are divergent). But the sum we have defined above actually becomes a number (we say it converges to a number) so long as $$|x| < \frac{1}{2}$$
@@ -114,86 +209,3 @@ Now $$
 $$ only if $$x < \frac{1}{2}$$
 
 Therefore our series $$F_n(x)$$ converges if $$x < \frac{1}{2}$$
-
-## Construct other series
-Now let's consider the series: $$xF(x)$$ and $$x^2F(x)$$
-
-Todo: Show these converge
-
-## Take difference
-
-First let's note that
-$$
-F(x) - xF(x) - x^2F(x)
-= F(x)(1 - x - x^2)
-$$
-
-Now let's write this a different way
-
-$$F(x) - xF(x) - x^2F(x)$$
-$$= f_1 + f_2x + f_3x^2 + ... + f_nx^{n-1} - (f_1x + f_2x^2 + f_3x^3 + ... + f_nx^{n}) - (f_1x^2 + f_2x^3 + f_3x^4 + ... + f_nx^{n+1})$$
-$$= f_1 + (f_2 - f_1)x - (f_3 - f_2 - f_1)x^2 + ... + (f_n - f_{n-1} - f_{n-2})x^{n-1}$$
-
-By applying $$f_n = f_{n-1} + f_{n-2}$$ and that $$f_2 = f_1 = 1$$ we get
-
-$$F(x) - xF(x) - x^2F(x) = F(x)(1 - x - x^2) = f_1 = 1$$
-
-Rearranging this gives:
-
-$$F(x) = \frac{1}{1 - x - x^2}$$
-
-
-## Write as partial fractions
-Using the quadratic formula we solve $$1- x - x^2 = 0$$:
-
-$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}=\frac{1 \pm \sqrt{1 + 4}}{-2}=-\frac{1 \pm \sqrt{5}}{2}$$
-
- so we can factor it into:
-
-$$1- x - x^2 = -(x + \frac{1 + \sqrt{5}}{2})(x + \frac{1 - \sqrt{5}}{2})$$
-
-This means we can write:
-
-$$F(x) = \frac{1}{1 - x - x^2} = -\frac{1}{(x + \frac{1 + \sqrt{5}}{2})(x + \frac{1 - \sqrt{5}}{2})} = - (\frac{A}{x + \frac{1 + \sqrt{5}}{2}} + \frac{B}{x + \frac{1 - \sqrt{5}}{2}})$$
-
-To find A and B we know that:
-
-$$A(x + \frac{1 - \sqrt{5}}{2}) + B(x + \frac{1 + \sqrt{5}}{2}) =1$$
-
-Now substitute in $$x = -\frac{1 - \sqrt{5}}{2}$$:
-
-$$B(-\frac{1 - \sqrt{5}}{2} + \frac{1 + \sqrt{5}}{2}) = B(\sqrt{5}) = 1 \Rightarrow B = \frac{1}{\sqrt{5}}$$
-
-This time substitute in $$x = -\frac{1 +\sqrt{5}}{2}$$:
-
-$$A(-\frac{1 +\sqrt{5}}{2} + \frac{1 - \sqrt{5}}{2}) = 1 \Rightarrow A = -\frac{1}{\sqrt{5}}$$
-
-Putting these values back in we get:
-
-$$F(x) =  -\frac{1}{\sqrt{5}}(-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} + \frac{1}{x + \frac{1 - \sqrt{5}}{2}})$$
-
-
-## Geometric series
-
-$$\sum_{k=0}^{\infty}ar^k = \frac{a}{1-r}$$
-
-$$-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} = -\frac{1}{x + \frac{1 + \sqrt{5}}{2}}*\frac{\frac{2}{1 + \sqrt{5}}}{\frac{2}{1 + \sqrt{5}}}=-\frac{\frac{2}{1 + \sqrt{5}}}{1+\frac{2}{1 + \sqrt{5}}x}=-\frac{\frac{2}{1 + \sqrt{5}}}{1-(-\frac{2}{1 + \sqrt{5}}x)}$$
-
-$$=-\sum_{k=0}^{\infty}(\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k$$
-
-
-$$\frac{1}{x + \frac{1 - \sqrt{5}}{2}}=\frac{1}{x + \frac{1 - \sqrt{5}}{2}}*\frac{\frac{2}{1-\sqrt{5}}}{\frac{2}{1-\sqrt{5}}}=\frac{\frac{2}{1-\sqrt{5}}}{1+\frac{2}{1-\sqrt{5}}x}=\frac{\frac{2}{1-\sqrt{5}}}{1-(-\frac{2}{1-\sqrt{5}}x)}$$
-
-$$=\sum_{k=0}^{\infty}(\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k$$
-
-## Factor
-
-$$F(x) = -\frac{1}{\sqrt{5}}(-\frac{1}{x + \frac{1 + \sqrt{5}}{2}} + \frac{1}{x + \frac{1 - \sqrt{5}}{2}})$$
-
-$$=-\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k + \sum_{k=0}^{\infty}(\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k)$$
-
-$$=\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(-\frac{2}{1 + \sqrt{5}})(-\frac{2}{1 + \sqrt{5}}x)^k + \sum_{k=0}^{\infty}(-\frac{2}{1-\sqrt{5}})(-\frac{2}{1-\sqrt{5}}x)^k)$$
-
-$$=\frac{1}{\sqrt{5}}(-\sum_{k=0}^{\infty}(-\frac{2}{1 + \sqrt{5}})^{k+1}(x)^k + \sum_{k=0}^{\infty}(-\frac{2}{1-\sqrt{5}})^{k+1}(x)^k)$$
-
-$$=\frac{1}{\sqrt{5}}(\sum_{k=0}^{\infty}((\frac{2}{1 + \sqrt{5}})^{k+1}- (\frac{2}{1-\sqrt{5}})^{k+1})x^k)$$

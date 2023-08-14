@@ -5,19 +5,28 @@ author: Charles Thomas
 ---
 
 ## What is a set?
-A set is a collection of objects. We denote a set by putting the list of objects in curly brackets. Here are some examples
+A set is a collection of objects. We denote a set by putting the list of objects in curly brackets. Here are some examples:
 
 $$\{1, 2, 4\}, \{cat, dog, bird\}, \{a, b, c\}$$
 
-Note that sets do not have duplicate items
+Note that sets do not have duplicate items.
 
-Two sets are the same when they contain exactly the same objects. 
+Two sets are the same when they contain exactly the same objects. For example
+
+$$\{a, b, c\} = \{c, a, b\}$$
+
+Because they contain the same objects even though we've written them in a different order. But
+
+$$\{a, b, c\} \neq \{a, b\}$$
+
+Because c is one set but not the other.
 
 ## Combining Sets
 There are two basic ways of combining sets to make sets out of existing sets.
 
 Firstly, we can take the union of two sets. This is denoted by the symbol:
-$$\cup$$. 
+
+$$\cup$$
 
 The union of two sets is a set with all the elements from either set. For example: 
 
@@ -25,7 +34,7 @@ $$\{1, 2, 3\} \cup \{4, 5, 6\} = \{1, 2, 3,4, 5,6\}$$
 
 If an element is in both sets when we take the union that element only appears once because sets do not have duplicate items 
 
-$$\{1, 2, 3\} \cup \{3, 4, 5,\} = \{1, 2, 3, 4, 5\}$$ 
+$$\{1, 2, 3\} \cup \{3, 4, 5\} = \{1, 2, 3, 4, 5\}$$ 
 
 The second way of combining sets is the intersection, denoted by
 
@@ -41,12 +50,23 @@ Suppose we have two sets called A and B. If all the elements of set A are in set
 
 $$A \subseteq B$$
 
+Let's look at an example
+
+$$\{1, 2, 3\} \subseteq \{1, 2, 3, 4\}$$
+
+Since all the elements in the set on the left are in the set on the right. In fact, a set is a subset of itself:
+
+$$\{1, 2, 3, 4\} \subseteq \{1, 2, 3, 4\}$$
+
+Because all the elements on the left are in the set on the right
+
 If A is a subset of B and A is not the same as B e.g. B has at least one element that is not in A then we say A is a strict subset of B and we write
 
 $$A \subset B$$
 
+
 ## Sizes of sets
-The size of a set of is called its cardinality. For finite sets it is just the number of elements in in that set. For infinite sets it gets more complicated but that's a topic for another post.
+The size of a set is called its cardinality. For finite sets, it is the number of elements in that set. For infinite sets, it gets more complicated but that's a topic for another post.
 
 We denote the size of a set with pipes e.g.
 

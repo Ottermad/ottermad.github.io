@@ -22,9 +22,9 @@ $$\{a, b, c\} \neq \{a, b\}$$
 Because c is one set but not the other.
 
 ## Combining Sets
-There are two basic ways of combining sets to make sets out of existing sets.
+There are two basic ways of making sets out of old ones.
 
-Firstly, we can take the union of two sets. This is denoted by the symbol:
+Firstly, we can take the union (or more) of two sets. This is denoted by the symbol:
 
 $$\cup$$
 
@@ -60,9 +60,13 @@ $$\{1, 2, 3, 4\} \subseteq \{1, 2, 3, 4\}$$
 
 Because all the elements on the left are in the set on the right
 
-If A is a subset of B and A is not the same as B e.g. B has at least one element that is not in A then we say A is a strict subset of B and we write
+Sometimes we want to discount the possibility of a subset being the same as the parent set e.g. we want the subset to be smaller.
+
+In the case where we are only interested in subsets which are different from the parent set we write:
 
 $$A \subset B$$
+
+and we say A is a strict subset of B
 
 
 ## Sizes of sets

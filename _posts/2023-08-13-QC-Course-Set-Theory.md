@@ -4,6 +4,8 @@ title: Basic Mathematics For Quantum Mechanics - Set theory
 author: Charles Thomas
 ---
 
+I wanted to write an easy to follow guide for Quantum Computing so in order to do this I thought I'd build it up piece by piece starting with the mathematical foundations needed. So to start it all off I'll start by talking about set theory - the building block of modern mathematics.
+
 ## What is a set?
 A set is a collection of objects. We denote a set by putting the list of objects in curly brackets. Here are some examples:
 
@@ -19,7 +21,7 @@ Because they contain the same objects even though we've written them in a differ
 
 $$\{a, b, c\} \neq \{a, b\}$$
 
-Because c is one set but not the other.
+Because c is in one set but not the other.
 
 ## Combining Sets
 There are two basic ways of making sets out of old ones.
@@ -32,7 +34,7 @@ The union of two sets is a set with all the elements from either set. For exampl
 
 $$\{1, 2, 3\} \cup \{4, 5, 6\} = \{1, 2, 3,4, 5,6\}$$
 
-If an element is in both sets when we take the union that element only appears once because sets do not have duplicate items 
+If an element is in both sets when we take the union that element only appears once because sets do not have duplicate items e.g.
 
 $$\{1, 2, 3\} \cup \{3, 4, 5\} = \{1, 2, 3, 4, 5\}$$ 
 
@@ -59,15 +61,6 @@ Since all the elements in the set on the left are in the set on the right. In fa
 $$\{1, 2, 3, 4\} \subseteq \{1, 2, 3, 4\}$$
 
 Because all the elements on the left are in the set on the right
-
-Sometimes we want to discount the possibility of a subset being the same as the parent set e.g. we want the subset to be smaller.
-
-In the case where we are only interested in subsets which are different from the parent set we write:
-
-$$A \subset B$$
-
-and we say A is a strict subset of B
-
 
 ## Sizes of sets
 The size of a set is called its cardinality. For finite sets, it is the number of elements in that set. For infinite sets, it gets more complicated but that's a topic for another post.

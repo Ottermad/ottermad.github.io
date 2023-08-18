@@ -88,3 +88,16 @@ is surjective as it will produce all the possible outputs e.g. all of the intege
 
 ## Bijective maps
 Some maps are both injective and surjective so we call these maps bijective. Sometimes you'll hear these maps called a bijection.
+
+## Binary operations
+Some maps can take more than one input. For example, addition is an example of a map that takes two inputs and gives us back a single output
+
+A map f from two sets A and B to a third C is written like this:
+
+$$f : A \times B \rightarrow C$$
+
+For example we might have the map
+
+$$f : \mathbb{R} \times mathbb{R} \rightarrow \mathbb{R}$$
+
+$$f(x, y) = x + y + 2$$

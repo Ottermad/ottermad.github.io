@@ -101,3 +101,5 @@ For example we might have the map
 $$f : \mathbb{R} \times mathbb{R} \rightarrow \mathbb{R}$$
 
 $$f(x, y) = x + y + 2$$
+
+A map can take any number of inputs but if it takes two inputs we call it a binary operation

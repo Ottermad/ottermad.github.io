@@ -3,10 +3,10 @@ layout: post
 title: Basic Mathematics For Quantum Mechanics - Complex Numbers
 author: Charles Thomas
 ---
-The name complex numbers is a misleading since complex numbers are not complex at all - so let's dive in.
+The name complex numbers is misleading since complex numbers are not complex at all - so let's dive in.
 
 ## What are Imaginary Numbers?
- In school you were told that you cannot take the square root of negative numbers, in fact you can.
+ In school, you were told that you cannot take the square root of negative numbers, in fact, you can.
 
 Let's start with the square root of -1 which is called i so:
 
@@ -20,12 +20,12 @@ Using this we can work out the square roots of other negative numbers, for examp
 
 $$\sqrt{-4} = \sqrt{4}\sqrt{-1} = 2i$$
 
-So we take the square root as normal and just add i on the end.
+So we take the square root as normal and add i on the end.
 
-These numbers of the form ai where a is real number are called the imaginary numbers.
+These numbers of the form ai where a is a real number, are called imaginary numbers.
 
 ## Complex Numbers
-Now we have imaginary numbers we can build the complex numbers out of them. We do this by considering numbers of the form
+Now we have imaginary numbers we can build complex numbers out of them. We do this by considering numbers of the form
 
 $$a + bi$$
 
@@ -45,17 +45,19 @@ Here are some examples:
 
 $$\overline{2 + 3i} = 2 - 3i$$
 
+$$\overline{4 - 7i} = 4 + 7i$$
+
 ## Addition and Subtraction
 We can add two complex numbers together. We do this by adding the real parts and imaginary parts separately: 
 
-$$(1 + 3i) + (4 + 7i) = 5 + 10i$$
+$$(1 + 3i) + (4 + 7i) = (1 + 4) + (3 + 7)i = 5 + 10i$$
 
 Subtraction works in a similar way:
 
-$$(1 + 3i) - (4 + 7i) = -3 - 4i$$
+$$(1 + 3i) - (4 + 7i) = (1-4) + (4-7)i  = -3 - 4i$$
 
 ## Multiplication
-Multiplying out out complex numbers works like expanding brackets in high school algebra:
+Multiplying out complex numbers works like expanding brackets in high school algebra:
 
 $$(1 + 3i)(4 + 7i) = 1(4 + 7i) + 3i(4 + 7i) = 4 + 7i + 12i + 21i^2$$
 
@@ -68,7 +70,9 @@ So we get
 $$(1 + 3i)(4 + 7i) = 4 + 7i + 12i - 21 = -17 + 19i$$
 
 ## Division
-We want to be able to divide two complex numbers. But let us start with something a little simpler: dividing a complex number by a real number. The rule for doing this is:
+We want to be able to divide two complex numbers. But let us start with something a little simpler: dividing a complex number by a real number.
+
+The rule for doing this is:
 
 $$(a + bi) / c = (a/c) + (b/c)i$$
 
@@ -80,7 +84,7 @@ So now we can turn to dividing complex numbers:
 
 $$\frac{a + bi}{c + di}$$
 
-We can turn this into multiplying by a complex number and then dividing by a real number by multiplying the top and bottom the fraction by the complex conjugate of the bottom.
+We can turn this into what we already know how to do: multiplying by a complex number and then dividing by a real number. To do this we multiply the top and bottom of the fraction by the complex conjugate of the bottom.
 
 $$\frac{a + bi}{c + di} = \frac{(a + bi)(c - di)}{(c + di)(c - di)} = \frac{(a + bi)(c - di)}{c^2 + d^2}$$
 

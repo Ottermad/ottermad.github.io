@@ -32,7 +32,7 @@ $$f : A \rightarrow B$$
 
 Then A is the domain and B is the codomain
 
-The range of a function is the set of all the outputs of a function. This sounds very similar to the codomain but it is different. To see this let's look at an example. If we have the following map:
+The range of a function is the set of all the outputs of a function. This sounds very similar to the codomain but it is slightly different. To see this let's look at an example. If we have the following map:
 
 $$g : \mathbb{Z} \rightarrow \mathbb{Z}$$
 
@@ -90,16 +90,18 @@ is surjective as it will produce all the possible outputs e.g. all of the intege
 Some maps are both injective and surjective so we call these maps bijective. Sometimes you'll hear these maps called a bijection.
 
 ## Binary operations
-Some maps can take more than one input. For example, addition is an example of a map that takes two inputs and gives us back a single output
+Some maps can take more than one input. For example, addition is an example of a map that takes two inputs and gives us back a single output.
 
 A map f from two sets A and B to a third C is written like this:
 
 $$f : A \times B \rightarrow C$$
 
-For example we might have the map
+For example, we might have the map
 
 $$f : \mathbb{R} \times mathbb{R} \rightarrow \mathbb{R}$$
 
 $$f(x, y) = x + y + 2$$
 
-A map can take any number of inputs but if it takes two inputs we call it a binary operation
+$$f(3, 5) = 3 + 5 + 2 = 10$$
+
+A map can take any number of inputs but if it takes two inputs we call it a binary operation and are very common. 

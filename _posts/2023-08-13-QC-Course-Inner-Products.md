@@ -35,9 +35,19 @@ We get
 
 $$\langle x, y \rangle = \langle y, x \rangle$$
 
-* Linearity in the first argument
+### Linearity in the first argument
+Linearity in the first argument means two things. Firstly if x, y and z are all vectors then
 
-* Positive-definiteness 
+$$\langle x + y, x \rangle = \langle x, z \rangle + \langle y, z \rangle$$
+
+Secondly, if s is a scalar and x and y are vectors then
+
+$$\langle sx, y \rangle = s\langle x, y \rangle$$
+
+### Positive-definiteness 
+This just means that the inner product of a vector with itself is always greater than or equal to 0
+
+$$\langle x, x \rangle \geq 0$$
 
 ## Geometry of an inner product
 An inner product is often said to give geometry to a space. This is because it allows us to talk about the sizes of vectors and the angles between them

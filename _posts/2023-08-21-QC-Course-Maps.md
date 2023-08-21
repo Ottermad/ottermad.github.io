@@ -98,7 +98,7 @@ $$f : A \times B \rightarrow C$$
 
 For example, we might have the map
 
-$$f : \mathbb{R} \times mathbb{R} \rightarrow \mathbb{R}$$
+$$f : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$$
 
 $$f(x, y) = x + y + 2$$
 

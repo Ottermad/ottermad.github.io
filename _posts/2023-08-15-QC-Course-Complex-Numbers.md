@@ -35,6 +35,17 @@ $$2 + 3i, 7+12i, 6 - 13i$$
 
 The first part is called the real part and the second part is called the imaginary part
 
+## Visualing Complex Numbers
+So far this probably seems very abstract. Thankfully, there is a nice way to visualise complex numbers that makes understanding them much easier.
+
+What we do is we plot them on a diagram where we plot the real part of the x axis and the imaginary part on the y axis
+
+![Argrand Diagram](/assets/complexnumbers/argand.png)
+
+Let's take a look at 2 + 3i and 2 - 3i when we plot them on this diagram
+
+![Examples](/assets/complexnumbers/example.png)
+
 ## Conjugation
 
 Conjugation is a simple operation - it just means flipping the sign of the imaginary part of a complex number. So a + bi goes to a - bi.

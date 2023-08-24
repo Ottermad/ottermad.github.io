@@ -1,4 +1,4 @@
----
+ ---
 layout: post
 title: Basic Mathematics For Quantum Mechanics - Complex Numbers
 author: Charles Thomas
@@ -104,3 +104,5 @@ We can do this since we know how to multiply complex numbers together and we kno
 Let's take a look at an example:
 
 $$\frac{1 + 3i}{4 + 7i} = \frac{(1 + 3i)(4 - 7i)}{(4 + 7i)(4-7i)} = \frac{25 + 5i}{16 + 49} = \frac{25 + 5i}{65} = \frac{5 + i}{13}$$
+
+And that's all we need to know about complex numbers for now. We'll pick up a bit more in the next post.

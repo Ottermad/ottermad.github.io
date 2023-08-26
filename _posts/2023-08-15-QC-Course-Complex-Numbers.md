@@ -6,7 +6,7 @@ author: Charles Thomas
 The name complex numbers is misleading since complex numbers are not complex at all - so let's dive in.
 
 ## What are Imaginary Numbers?
- In school, you were told that you cannot take the square root of negative numbers, in fact, you can.
+In school, you were told that you cannot take the square root of negative numbers, in fact, you can.
 
 Let's start with the square root of -1 which is called i so:
 
@@ -33,7 +33,18 @@ where a and b are real numbers (and can be positive or negative). For example:
 
 $$2 + 3i, 7+12i, 6 - 13i$$
 
-The first part is called the real part and the second part is called the imaginary part
+The first part is called the real part and the second part is called the imaginary part.
+
+## Visualing Complex Numbers
+So far this probably seems very abstract. Thankfully, there is a nice way to visualise complex numbers that makes understanding them much easier.
+
+What we do is we plot them on a diagram where we plot the real part of the x axis and the imaginary part on the y axis
+
+![Argrand Diagram](/assets/complexnumbers/argand.png)
+
+Let's take a look at 2 + 3i and 2 - 3i when we plot them on this diagram
+
+![Examples](/assets/complexnumbers/example.png)
 
 ## Conjugation
 
@@ -93,3 +104,5 @@ We can do this since we know how to multiply complex numbers together and we kno
 Let's take a look at an example:
 
 $$\frac{1 + 3i}{4 + 7i} = \frac{(1 + 3i)(4 - 7i)}{(4 + 7i)(4-7i)} = \frac{25 + 5i}{16 + 49} = \frac{25 + 5i}{65} = \frac{5 + i}{13}$$
+
+And that's all we need to know about complex numbers for now. We'll pick up a bit more in the next post.

@@ -249,17 +249,16 @@ GEM
       unf_ext
     unf_ext (0.0.8.2)
     unicode-display_width (1.8.0)
-    wdm (0.1.1)
     webrick (1.8.1)
 
 PLATFORMS
   x64-mingw-ucrt
   x86_64-darwin-14
+  x86_64-darwin-20
 
 DEPENDENCIES
   github-pages
   liquid (~> 4.0, >= 4.0.4)
-  wdm (>= 0.1.0)
   webrick (~> 1.8)
 
 BUNDLED WITH

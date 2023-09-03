@@ -95,12 +95,18 @@ What this means is that if we want to do scalar multiplication twice in a row we
 
 Finally, we have
 
-$$(a + b)v = av + bv$$
+$$(a + b)*v = a*v + b*v$$
+
+This rule means that we factor out v when doing scalar multiplication. So that 
+
+$$2*v + 3*v = (2+3)*v = 5*v$$
 
 ## How scalar multiplication and vector addition interact
 Finally, scalar multiplication and vector addition must interact in a certain way
 
-$$a(u + v) = au + bv$$
+$$a*(u + v) = a*u + a*v$$
+
+This means than we can expand brackets when doing scalar multiplication.
 
 ## Summary
 Now these rules might seem complicated but in fact, they are mostly the rules that we have for everyday addition and multiplication. They'll feel very natural after we do a bit more practice with them

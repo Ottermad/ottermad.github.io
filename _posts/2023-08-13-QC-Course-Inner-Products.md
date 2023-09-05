@@ -49,7 +49,21 @@ This just means that the inner product of a vector with itself is always greater
 
 $$\langle x, x \rangle \geq 0$$
 
-## Geometry of an inner product
-An inner product is often said to give geometry to a space. This is because it allows us to talk about the sizes of vectors and the angles between them
+## Size of vectors
+An inner product is often said to give geometry to a space. This is because it allows us to talk about the sizes of vectors and the angles between them.
+
+We can denote the size of the a vector v as \|v\| and we use the following the formula:
+
+$$|v| = \sqrt{\langle v, v \rangle}$$
+
+
+## Angle between two vectors
+If we have two vectors x and y then the angle t between them is defined as:
+
+$$cos(t) = \frac{\langle x, y \rangle}{|x||y|} = \frac{\langle x, y \rangle}{\sqrt{\langle x, x \rangle}\sqrt{\langle y, y \rangle}}$$ 
+
 
 ## Dot product from school
+In school, you might have encounter the dot product. The dot product is an example of inner product.
+
+Consider the vector

@@ -66,4 +66,46 @@ $$cos(t) = \frac{\langle x, y \rangle}{|x||y|} = \frac{\langle x, y \rangle}{\sq
 ## Dot product from school
 In school, you might have encounter the dot product. The dot product is an example of inner product.
 
-Consider the vector
+Let us consider the following 2 vectors:
+
+$$v = \begin{bmatrix}v_1 \\ v_2 \\ v_3\end{bmatrix} \in \mathbb{R}^3$$
+
+$$w = \begin{bmatrix}w_1 \\ w_2 \\ w_3\end{bmatrix} \in \mathbb{R}^3$$
+
+Then the dot product is defined as 
+
+$$v \cdot w = v_1w_1 + v_2w_2 + v_3w_3$$
+
+This formula meets all the criteria we outlined above and is probably the most common inner product you'll come across. And it works in any number of dimensions we just keep multipying the components together and adding them. So in n dimesions we have:
+
+$$v \cdot w = v_1w_1 + v_2w_2 + ... + v_nw_n$$
+
+Let's look at a quick example:
+
+$$v = \begin{bmatrix}3 \\ 4 \\ 7\end{bmatrix}$$
+
+$$w = \begin{bmatrix}5 \\ 8 \\ 1\end{bmatrix}$$
+
+So
+
+$$v \cdot w = 3*5 + 4*8 + 7*1 = 54$$
+
+
+## Dot products for complex numbers
+The above dot product only works for real numbers. To extend it to complex numbers we need to make one small change.
+
+$$v \cdot w = v_1\overline{w_1} + v_2\overline{w_2} + ... + v_n\overline{w_n}$$
+
+All we have done is take the complex conjugate of the components of the w vector.
+
+Let's take a look at an example
+
+$$v = \begin{bmatrix}3+2i \\ 4+7i\end{bmatrix}$$
+
+$$w = \begin{bmatrix}5 \\ 3+i\end{bmatrix}$$
+
+So
+
+$$v \cdot w = (3+2i)\overline{5} + (4+7i)\overline{(3+i)} = (3+2i)5 + (4+7i)(3-i)$$
+
+$$ = 15+10i + 19+17i = 34 + 27i$$

@@ -27,7 +27,7 @@ What this means is if we reverse the order of an inner product, we just get the 
 
 $$\langle x, y \rangle = \overline{\langle y, x \rangle}$$
 
-In this case where the set of scalars we are working with is the real numbers, then since 
+In the case where the set of scalars we are working with is the real numbers, then since 
 
 $$x = \overline{x}$$
 
@@ -52,7 +52,7 @@ $$\langle x, x \rangle \geq 0$$
 ## Size of vectors
 An inner product is often said to give geometry to a space. This is because it allows us to talk about the sizes of vectors and the angles between them.
 
-We can denote the size of the a vector v as \|v\| and we use the following the formula:
+We can denote the size of a vector v as \|v\| and we use the following formula:
 
 $$|v| = \sqrt{\langle v, v \rangle}$$
 
@@ -64,7 +64,7 @@ $$cos(t) = \frac{\langle x, y \rangle}{|x||y|} = \frac{\langle x, y \rangle}{\sq
 
 
 ## Dot product from school
-In school, you might have encounter the dot product. The dot product is an example of inner product.
+In school, you might have encountered the dot product. The dot product is an example of an inner product.
 
 Let us consider the following 2 vectors:
 
@@ -76,7 +76,7 @@ Then the dot product is defined as
 
 $$v \cdot w = v_1w_1 + v_2w_2 + v_3w_3$$
 
-This formula meets all the criteria we outlined above and is probably the most common inner product you'll come across. And it works in any number of dimensions we just keep multipying the components together and adding them. So in n dimesions we have:
+This formula meets all the criteria we outlined above and is probably the most common inner product you'll come across. And it works in any number of dimensions we just keep multiplying the components together and adding them. So in n dimensions we have:
 
 $$v \cdot w = v_1w_1 + v_2w_2 + ... + v_nw_n$$
 

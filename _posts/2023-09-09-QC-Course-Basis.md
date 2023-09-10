@@ -74,3 +74,6 @@ This is a basis as we can write any vector as a linear combination of them
 $$\begin{bmatrix}a \\ b\end{bmatrix} = a\begin{bmatrix}1 \\ 0\end{bmatrix} + b\begin{bmatrix}0 \\ 1\end{bmatrix}$$
 
 And they are linearly independent from each other as we can't write one in terms of the other
+
+# Understanding column vectors
+TODO

@@ -19,4 +19,4 @@ Closed systems evolve according to Hamiltonian / energy system
 Open systems evolve according to a unitary matrix
 
 
-
+## Braket notation

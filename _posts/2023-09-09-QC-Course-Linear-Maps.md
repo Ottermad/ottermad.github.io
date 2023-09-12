@@ -67,28 +67,27 @@ $$=\begin{bmatrix} 3 & 7 \\ 4 & 2\end{bmatrix}$$
 
 This is exactly what we have called a matrix. This means that every matrix is actually just describing a linear map.
 
+If we have a matrix A then we write Av to represent passing the vector v to matrix A. So
+
+$$f(v) = Av$$
+
+In the example above we used 
+
+$$v = b_1 + 3b_2$$
+
+So we could write
+
+$$f(b_1 + 3b_2) = \begin{bmatrix} 3 & 7 \\ 4 & 2\end{bmatrix}(b_1 + 3b_2)$$ 
+
+Using the syntax for column vectors from a previous post we get
+
+$$= \begin{bmatrix} 3 & 7 \\ 4 & 2\end{bmatrix}\begin{bmatrix} 1 \\ 3\end{bmatrix} = \begin{bmatrix}24 \\ 10\end{bmatrix}$$
+
 ## Matrices as linear maps
 We've just seen that linear maps corresopond to matrices. Where the ith column tells us what happens to the ith basis vector under the map.
 
 While this is true, there is one caveat. Vector spaces can have more than one basis. So when we write a linear map as a matrix we have chosen a specific basis to use. If we change the basis then the linear map will be represented by a different basis.
 
-To see this let's start by consider the following basis for 2D space:
-
-$$b_1 = \begin{bmatrix} 1 \\ 0\end{bmatrix}$$
-
-$$b_2 \begin{bmatrix} 0 \\ 1\end{bmatrix}$$
-
-Now let us consider the following simple map that just doubles the first basis vector:
-
-$$f(b_1) = 2b_1$$ 
-
-$$f(b_2) = 0$$
-
-Writing this a matrix we get
-
-$$\begin{bmatrix}2 & 0 \\ 0 & 0 \end{bmatrix}$$
-
-So now let's act on the following vector
 
 ## Matrix dimensions
 Thinking about matrices as linear maps tells us about which sizes of matrices can be multiplied by which vectors.
@@ -116,7 +115,24 @@ But I can write this as one operation by defining the matrix B where the first c
 Then the matrix multipication AB will give be a matrix where the first column is the result of Av and the second column is the result of Aw
 
 
-TODO: Example
+Let's take a look at example:
+
+$$A = \begin{bmatrix}1& 3 \\ 7 & 5\end{bmatrix}$$
+
+$$v = \begin{bmatrix}2 \\ 6\end{bmatrix}$$
+
+$$w = \begin{bmatrix}4 \\ 3\end{bmatrix}$$
+
+So we know that:
+
+$$Av = \begin{bmatrix}20 \\ 44\end{bmatrix}$$
+
+$$Aw = \begin{bmatrix}13 \\ 43\end{bmatrix}$$
+
+
+So
+
+$$\begin{bmatrix}1& 3 \\ 7 & 5\end{bmatrix}\begin{bmatrix}2 & 4 \\ 6 & 3\end{bmatrix} = \begin{bmatrix}20 & 13 \\ 44 & 43\end{bmatrix}$$
 
 Since matrix multiplication can be thought of as acting on as many n dimensional vectors as we can this tells than an m x n matrix must act on a n x p matrix because each column in the second matrix represents an n dimesional vector.
 
@@ -160,7 +176,7 @@ $$G = \begin{bmatrix}
 
 If 
 
-$h = g \circ f$$
+$$h = g \circ f$$
 
 Then we should have
 

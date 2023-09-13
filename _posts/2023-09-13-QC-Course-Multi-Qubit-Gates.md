@@ -138,3 +138,61 @@ Finally, let's talk about how we can use the single qubit gates we learnt about 
 
 Let's take our Hadamard gate from last time which did the following:
 
+$$\ket{0} \to \frac{\ket{0} + \ket{1}}{\sqrt{2}}$$
+
+$$\ket{1} \to \frac{\ket{0} - \ket{1}}{\sqrt{2}}$$
+
+Now, if we have a two qubit system:
+
+$$a\ket{0}_A\ket{0}_B + b\ket{0}_A\ket{1}_B + c\ket{1}_A\ket{0}_B + d\ket{1}_A\ket{1}_B$$
+
+Let's imagine what happens when we apply the Hadamard gate just to the A qubit. Let's start by doing the substitution from above:
+
+$$a(\frac{\ket{0}_A + \ket{1}_A}{\sqrt{2}})\ket{0}_B + b(\frac{\ket{0}_A + \ket{1}_A}{\sqrt{2}})\ket{1}_B + c(\frac{\ket{0}_A - \ket{1}_A}{\sqrt{2}})\ket{0}_B + d(\frac{\ket{0}_A - \ket{1}_A}{\sqrt{2}})\ket{1}_B$$
+
+Now we can simply this to:
+
+$$\frac{(a+c)}{\sqrt{2}}\ket{0}_A\ket{0}_B + \frac{(b+d)}{\sqrt{2}}\ket{0}_A\ket{1}_B + \frac{(a-c)}{\sqrt{2}}\ket{1}_A\ket{0}_B + \frac{(b-d)}{\sqrt{2}}\ket{1}_A\ket{1}_B$$
+
+So this is the output of applying a Hadamard gate to one qubit in a two qubit system. All we had to do was act on the first qubit. 
+
+Now how do we represent this as matrix. 
+
+We'll let's start by representing by what we want to do as:
+
+$$H_A \otimes I_B$$
+
+What this means is that we want to apply a Hadamard Gate to the first qubit and the identity gate e.g. the fate that does nothing to the second qubit.
+
+Now let's replace these symbols by the matching single qubit matrices:
+
+
+$$\frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} \otimes \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$$
+
+Now this is called the tensor product of two matrices and there is a formula for evaluating it given by:
+
+$$\begin{bmatrix}a & b \\ c & d\end{bmatrix} \otimes \begin{bmatrix}e & f \\ g & h\end{bmatrix} = \begin{bmatrix}a \begin{bmatrix}e & f \\ g & h\end{bmatrix} & b \begin{bmatrix}e & f \\ g & h\end{bmatrix} \\ c \begin{bmatrix}e & f \\ g & h\end{bmatrix} & d \begin{bmatrix}e & f \\ g & h\end{bmatrix}\end{bmatrix}=\begin{bmatrix}ae & af & be & bf \\ag & ah & bg & bh \\ ce & cf & de & df \\ cg & ch & dg & dh \end{bmatrix}$$
+
+which in our case will give us:
+
+$$
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}1 \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} & 1 \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} \\ 
+1 \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix} & -1 \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}
+\end{bmatrix}
+$$
+
+$$=\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\ 
+1 & 0 & -1 & 0 \\
+0 & 1 & 0 & 1 
+\end{bmatrix}
+$$
+
+Now we can use this formula to evaluate apply any single qubit gate to a two qubit system. So if I wanted to apply a Y gate to the second qubit I would write:
+
+$$I_A \otimes Y_B$$
+
+Then subsitute in the matrices and apply the formula

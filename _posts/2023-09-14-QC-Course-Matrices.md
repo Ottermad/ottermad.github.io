@@ -57,7 +57,7 @@ $$AB = \begin{bmatrix}\
 ## Identity matrix
 There is a special matrix called I that when you multiply another matrix by it the matrix doesn't change. So for all matrices A we have
 
-$$AI = A$
+$$AI = A$$
 
 This matrix I is also called the identity matrix and it is the matrix with 1s along its diagonal and 0s everywhere else.
 

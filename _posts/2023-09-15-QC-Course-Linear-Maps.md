@@ -38,11 +38,11 @@ So if we know what f does to each basis vector, then we know what it does to any
 
 Let's write f in the following way:
 
-$$[f(b_1) f(b_2) f(b_3) ... f(b_n)]$$
+$$\begin{bmatrix}f(b_1) & f(b_2) & f(b_3) & ... & f(b_n)\end{bmatrix}$$
 
 Here's an example
 
-$$[f(b_1) f(b_2)] = [3 5]$$
+$$\begin{bmatrix}f(b_1) & f(b_2)\end{bmatrix} = \begin{bmatrix}3 & 5\end{bmatrix}$$
 
 So 
 
@@ -65,7 +65,7 @@ $$f(b_1 + 3b_2) = \begin{bmatrix}3 \\ 4\end{bmatrix} + 3*\begin{bmatrix}7 \\ 2\e
 
 So we can write f using a similar syntax to the above and we get
 
-$$[f(b_1) f(b_2)] = [\begin{bmatrix}3 \\ 4\end{bmatrix} \begin{bmatrix}7 \\ 2\end{bmatrix}]$$
+$$\begin{bmatrix}f(b_1) & f(b_2)\end{bmatrix} = [\begin{bmatrix}3 \\ 4\end{bmatrix} \begin{bmatrix}7 \\ 2\end{bmatrix}]$$
 
 But we will drop the inner sets of brackets to make it more readable so we get
 

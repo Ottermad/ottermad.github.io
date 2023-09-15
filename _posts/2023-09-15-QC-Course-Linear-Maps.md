@@ -22,6 +22,12 @@ Let V have the following basis
 
 $$\{b_1, b_2, ...., b_n\}$$
 
+Then we can write any vector, v as:
+
+$$\sum_i^n a_i b_i$$
+
+Now, let's try applying f to v
+
 $$f(v) = f(\sum_i^n a_i b_i)$$
 
 $$= \sum_i^nf( a_i b_i)$$

@@ -18,7 +18,7 @@ where v,w are vectors and a and b are scalars then f is a linear map
 
 Let f be a linear map
 
-Let V has the following basis
+Let V have the following basis
 
 $$\{b_1, b_2, ...., b_n\}$$
 
@@ -28,13 +28,13 @@ $$= \sum_i^nf( a_i b_i)$$
 
 $$= \sum_i^na_i f(b_i)$$
 
-So if we know what f does to each basis vector then we know what is does to any vector
+So if we know what f does to each basis vector, then we know what it does to any vector.
 
-So let's write f in the following way:
+Let's write f in the following way:
 
 $$[f(b_1) f(b_2) f(b_3) ... f(b_n)]$$
 
-So here's an example
+Here's an example
 
 $$[f(b_1) f(b_2)] = [3 5]$$
 
@@ -57,7 +57,7 @@ So we get
 
 $$f(b_1 + 3b_2) = \begin{bmatrix}3 \\ 4\end{bmatrix} + 3*\begin{bmatrix}7 \\ 2\end{bmatrix} = \begin{bmatrix}24 \\ 10\end{bmatrix}$$
 
-So we can write f using a similar syntax to above and we get
+So we can write f using a similar syntax to the above and we get
 
 $$[f(b_1) f(b_2)] = [\begin{bmatrix}3 \\ 4\end{bmatrix} \begin{bmatrix}7 \\ 2\end{bmatrix}]$$
 
@@ -84,7 +84,7 @@ Using the syntax for column vectors from a previous post we get
 $$= \begin{bmatrix} 3 & 7 \\ 4 & 2\end{bmatrix}\begin{bmatrix} 1 \\ 3\end{bmatrix} = \begin{bmatrix}24 \\ 10\end{bmatrix}$$
 
 ## Matrices as linear maps
-We've just seen that linear maps corresopond to matrices. Where the ith column tells us what happens to the ith basis vector under the map.
+We've just seen that linear maps correspond to matrices. Where the ith column tells us what happens to the ith basis vector under the map.
 
 While this is true, there is one caveat. Vector spaces can have more than one basis. So when we write a linear map as a matrix we have chosen a specific basis to use. If we change the basis then the linear map will be represented by a different basis.
 
@@ -92,17 +92,17 @@ While this is true, there is one caveat. Vector spaces can have more than one ba
 ## Matrix dimensions
 Thinking about matrices as linear maps tells us about which sizes of matrices can be multiplied by which vectors.
 
-If a matrix is linear map from an n  dimension space, then that space has n basis vectors, so the matrix must have n columns, one for each basis vector.
+If a matrix is a linear map from an n-dimension space, then that space has n basis vectors, so the matrix must have n columns, one for each basis vector.
 
-So an m x n matrix must act on n dimensional vectors because it is a map from an n dimensional space
+So an m x n matrix must act on n-dimensional vectors because it is a map from an n-dimensional space
 
 The number of rows, m, tells us the dimension of the output space.
 
 ## Matrix multiplication as working on multiple vectors at once
 
-While matrix multiplication can at first seem rather arbitary, there are actually has a couple of nice ways of thinking about it.
+While matrix multiplication can at first seem rather arbitrary, there are actually a couple of nice ways of thinking about it.
 
-The first is to consider it as a short cut for acting on many vectors at once.
+The first is to consider it as a shortcut for acting on many vectors at once.
 
 So if I have a matrix A and two vectors v and w. If I want to work out Av and Aw I might do
 
@@ -112,10 +112,10 @@ $$w' = Aw$$
 
 But I can write this as one operation by defining the matrix B where the first column of B is v and the second column of B is w.
 
-Then the matrix multipication AB will give be a matrix where the first column is the result of Av and the second column is the result of Aw
+Then the matrix multiplication AB will give a matrix where the first column is the result of Av and the second column is the result of Aw
 
 
-Let's take a look at example:
+Let's take a look at an example:
 
 $$A = \begin{bmatrix}1& 3 \\ 7 & 5\end{bmatrix}$$
 
@@ -134,7 +134,7 @@ So
 
 $$\begin{bmatrix}1& 3 \\ 7 & 5\end{bmatrix}\begin{bmatrix}2 & 4 \\ 6 & 3\end{bmatrix} = \begin{bmatrix}20 & 13 \\ 44 & 43\end{bmatrix}$$
 
-Since matrix multiplication can be thought of as acting on as many n dimensional vectors as we can this tells than an m x n matrix must act on a n x p matrix because each column in the second matrix represents an n dimesional vector.
+Since matrix multiplication can be thought of as acting on as many n-dimensional vectors. This tells us that an m x n matrix must act on an n x p matrix because each column in the second matrix represents an n-dimensional vector.
 
 
 ## Matrix multiplication as the composition of linear maps
@@ -142,7 +142,7 @@ There is another way of thinking about matrix multiplication.
 
 If I have a linear map f from X to Y and another linear map g from Y to Z then I can compose the two maps together.
 
-This means I just apply the map f and then the map g.
+This means I apply the map f and then the map g.
 
 So I can define a new map 
 
@@ -150,11 +150,11 @@ $$h : X \to Z$$
 
 $$h(v) = g(f(v))$$
 
-Given we know there is a matrix that represents f and matrix that represnets g is there a way we can use these two matrices to work out the matrix representing h is. Well we can we just mulitply them together.
+Given we know there is a matrix that represents f and a matrix that represents g is there a way we can use these two matrices to work out the matrix representing h is. Well, we can just multiply them together.
 
-Seeing this is a little complicated by we'll work through it step by step.
+Seeing this is a little complicated but we'll work through it step by step.
 
-Let's assume f goes from an m dimensional space to an n dimensional space. So its matrix will need m columns - one for each dimension of the input space and n rows - one for each dimension of the output space.
+Let's assume f goes from an m-dimensional space to an n-dimensional space. So its matrix will need m columns - one for each dimension of the input space and n rows - one for each dimension of the output space.
 
 
 $$F = \begin{bmatrix}
@@ -164,7 +164,7 @@ $$F = \begin{bmatrix}
   f_{n1} & f_{n2} & ... & f_{nm}
 \end{bmatrix}$$
 
-Now since g takes in the output from f it must go from an n dimensional space but then it can go to any dimensional space so let's just say it is a p dimensional space. So g will have n columns and p rows.
+Now since g takes in the output from f it must go from an n-dimensional space but then it can go to any dimensional space so let's just say it is a p-dimensional space. So g will have n columns and p rows.
 
 $$G = \begin{bmatrix}
  g_{11} & g_{12} & ... & g_{1n} \\ 
@@ -222,4 +222,4 @@ $$ = \begin{bmatrix}
 \end{bmatrix} 
 $$
 
-So this tells us how to work out the ith column of H which is infact the same as the rule I gave you in the previous post
+So this tells us how to work out the ith column of H which is in fact the same as the rule I gave you in the previous post

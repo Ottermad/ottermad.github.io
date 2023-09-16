@@ -4,11 +4,11 @@ title: Basic Mathematics For Quantum Mechanics - Eigenvectors
 author: Charles Thomas
 ---
 
-Let's consider a matrix A and a vector v. When we multiply when together we get back another vector w. So 
+Let's consider a matrix A and a vector v. When we multiply A and v together we get back another vector w. So 
 
 $$Av = w$$
 
-Normally w is completely different to v. However, sometimes w is multiple of v. What I mean by this is that there is some scalar, s, that when I times v by it I get w. So
+Normally w is completely different to v. However, sometimes w is multiple of v. What I mean by this is that there is some scalar, s, that when I multiply v by it I get w. So
 
 $$w = sv$$
 

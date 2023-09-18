@@ -4,10 +4,10 @@ title: Basic Quantum Mechanics For Quantum Computing
 author: Charles Thomas
 ---
 
-We finally know enough mathematics we can start delving into quantum mechanics.
+We finally know enough mathematics that we can start delving into quantum mechanics.
 
 ## Representing states
-To get with quantum mechanics, let's imagine we have a coin. When we flip a coin, we find that it can either be heads or tails. We say the coin is either in the heads state or the tails state. Let's represent this using
+To get started with quantum mechanics, let's imagine we have a coin. When we flip a coin, we find that it can either be heads or tails. We say the coin is either in the heads state or the tails state. Let's represent this using
 
 $$\ket{H} = \text{Coin is heads}$$
 
@@ -15,7 +15,7 @@ $$\ket{T} = \text{Coin is tails}$$
 
 Now, so far this is the same as classical physics. We have a system that can be one of two states. But here's where stuff gets a little weird. In Quantum Mechanics, the states form a complex vector space. What this means is that if I have one state, then all multiples of that state are also possible. If it also means if I have two or more states then all linear combinations of those states are possible.
 
-So in the case of our quanutm coin, we don't have just have the two states above we all linear combinations of them. So all the states of the form
+So in the case of our quantum coin, we don't have just have the two states above we have all the linear combinations of them. So all the states of the form
 
 $$a\ket{H} + b\ket{T}$$
 
@@ -30,11 +30,11 @@ when I measure it I will find that the coin is either heads or tails. So the sta
 
 $$\ket{H}\text{ or }\ket{ T }$$
 
-What this means is that even though the coin can be this more general state, when I perform a measurement on it then it changes. This is strange because it means you can't measure a system without possibily changing it.
+What this means is that even though the coin can be in this more general state, when I perform a measurement on it then it changes. This is strange because it means you can't measure a system without possibly changing it.
 
 We say that when we do a measurement the state collapses.
 
-Now, we ask can we know what the state will collapse into. Well, we can't know exactly but we can know the probability.
+Now, we can ask if we can know what the state will collapse into? Well, we can't know exactly but we can know the probability.
 
 For a state:
 
@@ -44,7 +44,7 @@ Then the probability of measuring heads is given by:
 
 $$P(\ket{H}) = a\overline{a}$$
 
-And the probability of mesuring tails is given by:
+And the probability of measuring tails is given by:
 
 $$P(\ket{T}) = b\overline{b}$$
 
@@ -80,7 +80,7 @@ have modulus 1. Which means that
 
 $$e^{it}\overline{e^{it}} = e^{it}e^{-it} = 1$$
 
-So this means for any quantum state, I can multiply any of the coeffient by a number of this form without changing the probabilities of what I'll measure.
+This means for any quantum state, I can multiply any of the coefficients by a number of this form without changing the probabilities of what I'll measure.
 
 This is because if I have
 
@@ -96,7 +96,7 @@ $$e^{it}$$
 
 a phase.
 
-As we'll see in a future post, the phase difference between the coffients actually can be detected. This means:
+As we'll see in a future post, the phase difference between the coefficients actually can be detected. This means:
 
 $$a\ket{H} + e^{it}b\ket{T}$$
 
@@ -104,11 +104,11 @@ is different to
 
 $$a\ket{H} + b\ket{T}$$
 
-However, if the phase applies to whole state:
+However, if the phase applies to the whole state:
 
 $$e^{it}(a\ket{H} + b\ket{T})$$ 
 
-then we cannot deteted this difference so it is the same as:
+then we cannot determine this difference so it is the same as:
 
 $$a\ket{H} + b\ket{T}$$
 
@@ -122,14 +122,14 @@ The reason the matrix must be unitary is that unitary matrices conserve probabil
 
 $$a\overline{a} + b\overline{b} = 1$$
 
-Then multipling a vector by a unitary matrix does not change this fact.
+Then multiplying a vector by a unitary matrix does not change this fact.
 
-Now, how do we know what unitary matrix to use. Well for a closed system - that is a system where nothing interferes with it it evolves according to the Hamiltonian - which you can think of as describing the energy of the system.
+Now, how do we know what unitary matrix to use? Well for a closed system - that is a system where nothing interferes with it it evolves according to the Hamiltonian - which you can think of as describing the energy of the system.
 
-However, in Quantum Computing, we actually deal with open systems because we force the state to involve in certain ways, so we can the unitary matrix that we want to use.
+However, in Quantum Computing, we actually deal with open systems because we force the state to evolve in certain ways, so we can the unitary matrix that we want to use.
 
 ## Qubits
-Now, so far we've talked about a quanutm coin. But in quantum computer science, we talk about qubit. Now a qubit is just another quantum system but instead of using:
+Now, so far we've talked about a quantum coin. But in quantum computer science, we talk about qubits. Now a qubit is just another quantum system but instead of using:
 
 $$a\ket{H} + b\ket{T}$$
 
@@ -158,7 +158,7 @@ We won't worry too much about the differences between bras and kets for now. The
 
 $$\braket{H|H}$$
 
-This combination of a bra and ket (a bracket) is stands for taking the inner product between the two vectors.
+This combination of a bra and ket (a bracket) stands for taking the inner product between the two vectors.
 
 ## Orthogonality
 This is important because we have one last special thing to note about our quantum states. 

@@ -4,9 +4,9 @@ title: Basic Quantum Computing - Super dense coding
 author: Charles Thomas
 ---
 
-Note:This is a rework of an earlier post. You can checkout the original [here](https://ottermad.github.io/2021/12/23/Super-Dense-Coding.html)
+Note: This is a rework of an earlier post. You can check out the original [here](https://ottermad.github.io/2021/12/23/Super-Dense-Coding.html)
 
-We are finally ready to look at some applications of quantum computation. We're going to start by looking at super dense coding which allows us to send 2 classical bits of information by sending one qubit.
+We are finally ready to look at some applications of quantum computation. We're going to start by looking at super-dense coding which allows us to send 2 classical bits of information by sending one qubit.
 
 
 # The Setup
@@ -19,7 +19,7 @@ Afterwards, he sends qubit A to Alice and qubit B to Bob.
 # Sending information
 Alice wants to send 2 classical bits of information to Bob. That means she wants to send Bob: 00, 10, 01 or 11. 
 
-Depending on which of these 4 she wants to send she'll perform a different transformation on her qubit before sending it to Bob.(Since Bob does nothing this is represented by the identity transform I)
+Depending on which of these 4 she wants to send she'll perform a different transformation on her qubit before sending it to Bob. (Since Bob does nothing this is represented by the identity transformation I)
 
 ## Sending 00
 Now if Alice wants to send 00 she does nothing so the system stays in the state:

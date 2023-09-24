@@ -7,7 +7,7 @@ author: Charles Thomas
 Now, we've learnt a little bit about quantum computing let's get started by programming one.
 
 ## Python
-We're going to be using the Python programming language to start writing quantum programmes. So I'm going to assume you know a little bit of Python and have it installed locally.
+We're going to be using the Python programming language to start writing quantum programs. So I'm going to assume you know a little bit of Python and have it installed locally.
 
 I'm also going to assume that you have a little bit of knowledge of how to use the terminal (or command prompt on Windows).
 
@@ -26,7 +26,7 @@ python3-m venv ./venv
 source venv/bin/activate
 ```
 
-Finally, let's install Qiskit which is the libary we'll use to start working with Quantum Computers.
+Finally, let's install Qiskit which is the library we'll use to start working with Quantum Computers.
 
 ```
 pip install qiskit
@@ -44,7 +44,7 @@ from qiskit_aer import AerSimulator
 
 These two lines are going to import all the things we'll need for writing our program.
 
-Next let's add:
+Next, let's add:
 
 ```
 register = QuantumRegister(1)
@@ -83,9 +83,9 @@ counts = result.get_counts(compiled_circuit)
 print(counts)
 ```
 
-This will create a simulator that simulates a quantum computer. It will then take our circuit and convert into a form that the simulator can understand. Then it will run a 1000 times theon simulator. Finally, we get the results of running our programme on the simulator.
+This will create a simulator that simulates a quantum computer. It will then take our circuit and convert it into a form that the simulator can understand. Then it will run 1000 times on the simulator. Finally, we get the results of running our programme on the simulator.
 
-So in total our programme should look like this:
+So in total, our programme should look like this:
 
 ```
 from qiskit import QuantumCircuit, QuantumRegister, transpile
@@ -124,5 +124,5 @@ And we should get the following output:
 {'1': 1000}
 ```
 
-This tells we got the result 1 a thousand times which is exactly what we'd expect because we started with a qubit set to 0 then applied a NOT gate to change it to a 1.
+This tells us we got the result 1 a thousand times which is exactly what we'd expect because we started with a qubit set to 0 then applied a NOT gate to change it to a 1.
 

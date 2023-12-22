@@ -88,7 +88,7 @@ Finally, if Bob receives 11 from Alice then the system is in the state:
 
 $$\ket{11}_A(b\ket{0} _B-a\ket{1}_B)$$
 
-Then he applies the following fate
+Then he applies the following gate
 
 $$iY = \begin{bmatrix}
     0 & -1 \\ 1 & 0
@@ -102,5 +102,8 @@ This means no matter what Alice sends to him, at the end the state of Bob's syst
 
 $$a\ket{0} _B+b\ket{1}_B$$ 
 
-which is the qubit Alice wanted to send him
+which is the qubit Alice wanted to send him.
+
+If you're interest in my content like this please checkout the rest of my course that you can find [here]({% post_url 2023-09-25-QC-Course-Intro %}) or sign up to my [newsletter](https://open.substack.com/pub/charliethomas/p/weekly-newsletter-21th-december?r=6k919&utm_campaign=post&utm_medium=web)
+
 

@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Fibonacci Numbers
+title: A better way to calculate the Fibonacci Numbers
 author: Charles Thomas
 ---
 
+You might have heard of the fibonacci numbers (don't worry if you've haven't - we'll explain them below) but did you know we there is a way of calculating them without having to use recursion called Bidet's formula.
+
 # What are the Fibonacci numbers?
-Fibonacci numbers are the sequence of numbers: 
+The Fibonacci numbers are the sequence of numbers: 
 
 $$1, 1, 2, 3, 5, 8, 13...$$
 
@@ -18,7 +20,7 @@ And the fourth is
 
 $$1 + 2 = 3$$
 
-We can write this as using the following formula: 
+We can write this using the following formula: 
 
 $$f_n = f_{n-1} + f_{n-1}$$
 
@@ -38,7 +40,7 @@ def find_nth_fib(n):
 The code above works by computing all the previous fibonacci numbers in order to find the one you're looking for.
 
 # Is there another way?
-However, there is a way of calculating the nth fibonacci number directly and it's given by this formula:
+However, there is a way of calculating the nth fibonacci number directly and it's given by Bidet's formula:
 
 $$
 \frac{1}{\sqrt{5}}((\frac{1 + \sqrt{5}}{2})^n - (\frac{1 - \sqrt{5}}{2})^n)
@@ -109,7 +111,7 @@ $$F(x) - xF(x) - x^2F(x) = F(x)(1 - x - x^2) = 1$$
 
 $$F(x) = \frac{1}{1 - x - x^2}$$
 
-## Finding roots
+## Finding roots
 We can solve this quadratic equation using the quadrartic formula
 
 $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}=\frac{1 \pm \sqrt{1 + 4}}{-2}$$
@@ -122,7 +124,7 @@ So we can write:
 
 $$F(x) = \frac{1}{1 - x - x^2} = -\frac{1}{(x + \frac{1 + \sqrt{5}}{2})(x + \frac{1 - \sqrt{5}}{2})}$$
 
-## Write as partial fractions
+## Partial Fractions
 The next step is to use partial fractions to split out this nasty looking denominator into the the sum of two terms:
 
 
@@ -238,7 +240,7 @@ so we can work with it nicely.
 
 To finish off our proof we will check that F(x) converges
 
-To prove our series $$F(x)$$ is convergent. We'll use a common technique: showing that the terms of our series is smaller than the terms of some other series. Then showing that the other series converges. To do this we'll need two convergence tests
+To prove our series $$F(x)$$ is convergent. We'll use a common technique: show that the terms of our series are smaller than the terms of some other series. Then showing that the other series converges. To do this we'll need two convergence tests
 
 ### Ratio Test 
 For a series: 
@@ -260,13 +262,13 @@ $$
 \lim_{n \rightarrow \infty} |\frac{a_{n+1}}{a_n}| < 1
 $$ 
 
-then the series converges
+then the series converges. If
 
 $$
 \lim_{n \rightarrow \infty} |\frac{a_{n+1}}{a_n}| = 1
 $$ 
 
-then the test doesn't tell you one way or the other.
+then the test doesn't tell you one way or the other. And if
 
 $$
 \lim_{n \rightarrow \infty} |\frac{a_{n+1}}{a_n}| > 1
@@ -291,7 +293,11 @@ $$
 |a_n| \leq |b_n|
 $$
 
-then $$\sum_{n=0}^{\infty}a_n$$ also converges
+then 
+
+$$\sum_{n=0}^{\infty}a_n$$ 
+
+also converges
 
 ### $$2^n$$ series
 Now we can prove that F(x) converges
@@ -335,8 +341,10 @@ $$
 =\lim_{n \rightarrow \infty} |(2x)^n| 
 $$
 
-Now $$
-|(2x)^n| = |2^n x^n|  < 1
-$$ only if $$x < \frac{1}{2}$$
+Now 
+
+$$|(2x)^n| = |2^n x^n|  < 1$$ 
+
+only if $$x < \frac{1}{2}$$
 
 Therefore our series $$F_n(x)$$ converges if $$x < \frac{1}{2}$$

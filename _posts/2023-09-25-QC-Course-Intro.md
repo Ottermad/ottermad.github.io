@@ -47,3 +47,4 @@ Here are links to all the course posts in order so please jump in. Please reach 
 * [No Cloning]({% post_url 2023-09-23-QC-Course-No-Cloning %})
 * [Qiskit]({% post_url 2023-09-24-QC-Course-Qiskit %})
 * [Teleportation]({% post_url 2023-12-22-QC-Course-Teleportation %})
+* [Quantum Key Distribution]({% post_url 2024-01-08-QC-Course-Quantum-Key-Distribution %})

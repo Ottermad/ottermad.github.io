@@ -126,7 +126,7 @@ But how can Alice and Bob be sure that no one intercepted the qubits that Alice 
 Well if someone, say Eve, did manage to intercept the qubit she wouldn't know what basis it is in.
 Since Alice doesn't tell anyone that until after Bob receives all the qubits.
 
-This means she can't make a copy of the qubit because of the no cloning theorem.
+This means she can't make a copy of the qubit because of the [no cloning theorem]({% post_url 2023-09-23-QC-Course-No-Cloning %}).
 
 And if she tries to measure it herself there is a 50% chance she'll pick the wrong basis.
 If she picks the wrong basis then she will disturb the state so when Bob measures it he will get 

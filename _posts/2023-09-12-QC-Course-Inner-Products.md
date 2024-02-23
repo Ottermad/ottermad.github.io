@@ -38,7 +38,7 @@ $$\langle x, y \rangle = \langle y, x \rangle$$
 ### Linearity in the first argument
 Linearity in the first argument means two things. Firstly if x, y and z are all vectors then
 
-$$\langle x + y, x \rangle = \langle x, z \rangle + \langle y, z \rangle$$
+$$\langle x + y, z \rangle = \langle x, z \rangle + \langle y, z \rangle$$
 
 Secondly, if s is a scalar and x and y are vectors then
 

@@ -28,7 +28,7 @@ For this project we are going to use virtualenv which is a tool that allows you 
 
 Now run:
 
- `mkdir FlaskTutorial && cd FlaskTutorial`
+`mkdir FlaskTutorial && cd FlaskTutorial`
 
  which will create an new directory for our project and move us into it.
 
@@ -41,7 +41,7 @@ sys.executable
 
 Now, you are going to need to exit the interpreter (Ctrl/Cmd + C) as we are actually going to create the virtualenv, so run (please substitute in your path from the above step):
 
-`virtualenv venv -p {{your path goes here}}`
+`virtualenv venv -p {your path goes here}`
 
 For example, I might run:
 

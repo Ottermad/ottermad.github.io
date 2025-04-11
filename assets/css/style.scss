@@ -6,3 +6,18 @@
 .post {
 		padding-bottom: 1em;
 }
+
+
+#nav {
+	list-style: none;
+	padding-left: 0;
+}
+
+#profile {
+	border-radius: 2em;
+	max-height: 200px;
+	max-width: 200px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	display:block;
+}

@@ -38,11 +38,11 @@ e.g. it runs U j times for an input j and doesn't change j. This can be done by 
 
 # Step 1 - Setup
 
-The first step is to setup the quantum state. We're going to start with n qubits all set to 0 and then our eigenvector u. This meas we have the state 
+The first step is to setup the quantum state. We're going to start with n qubits all set to 0 and then our eigenvector u. This means we have the state 
 
 $$\ket{0}\ket{u}$$
 
-# Step 2 - Create a superpostion
+# Step 2 - Create a superposition
 
 Next, we're going to create a superposition of the first n qubits. We'll do this by applying the Hadamard gate to each of them. 
 
@@ -77,7 +77,7 @@ $$=\frac{1}{\sqrt{2^n}}\sum_{i=0}^{2^n -1} \ket{j} (e^{2\pi i \phi_s})^j\ket{u}$
 $$=\frac{1}{\sqrt{2^n}}\sum_{i=0}^{2^n -1} \ket{j} e^{2\pi i \phi_s j}\ket{u}$$
 
 # Step 4 - Inverse Fourier Transform
-Now we're going to apply something called the Inverse Quantumm Fourier Transform (shorted to the inverse QFT). This is a super important part of quantum computing so we're going to give it its own post. So for now all we need to know if that it takes
+Now we're going to apply something called the Inverse Quantum Fourier Transform (shorted to the inverse QFT). This is a super important part of quantum computing so we're going to give it its own post. So for now all we need to know if that it takes
 
 $$\frac{1}{\sqrt{2^n}}\sum_{i=0}^{2^n -1} \ket{j} e^{2\pi i \phi_s j}\ket{u}$$
 

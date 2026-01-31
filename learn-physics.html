@@ -1,0 +1,374 @@
+---
+layout: default
+---
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <style>
+        /** {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }*/
+
+        body {
+/*            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;*/
+/*            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+/*            padding: 20px;*/
+        }
+
+        .container {
+/*            background: white;*/
+/*            border-radius: 20px;*/
+/*            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);*/
+/*            padding: 40px;*/
+/*            max-width: 900px;*/
+            width: 100%;
+        }
+
+       /* h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-align: center;
+        }*/
+
+        .subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 500px;
+            margin-bottom: 30px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: #fafafa;
+        }
+
+        #graphNetwork {
+            width: 100%;
+            height: 100%;
+        }
+
+        .details-panel {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .details-panel.show {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .details-panel h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .detail-value {
+            color: #333;
+        }
+
+        .instruction {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            margin-top: 15px;
+        }
+</style>
+
+
+
+        <h1>So you want to learn theoretical physics?</h1>
+        <p class="subtitle">Click on any node to see detailed information</p>
+        
+        <div class="chart-container">
+            <div id="graphNetwork"></div>
+        </div>
+
+        <div class="details-panel" id="detailsPanel">
+            <h3 id="detailsTitle">Subject Details</h3>
+            <div id="detailsContent"></div>
+        </div>
+
+        <p class="instruction">💡 Click on any node or edge in the graph above to view details • Drag nodes to rearrange</p>
+
+    <script>
+        // Global variables to store graph data
+        let nodes, edges, nodeDetails, edgeDetails, network;
+
+        // Helper function to convert hex color to darker border color
+        function darkenColor(hex) {
+            const num = parseInt(hex.replace('#', ''), 16);
+            const r = Math.max(0, (num >> 16) - 20);
+            const g = Math.max(0, ((num >> 8) & 0x00FF) - 20);
+            const b = Math.max(0, (num & 0x0000FF) - 20);
+            return '#' + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
+        }
+
+        // Load graph data from JSON file
+        async function loadGraphData() {
+            try {
+                const response = await fetch('graph-data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const graphData = await response.json();
+
+                // Convert JSON nodes to vis-network format
+                const visNodes = graphData.nodes.map(node => {
+                    const borderColor = darkenColor(node.color);
+                    return {
+                        id: node.id,
+                        label: node.label,
+                        color: {
+                            background: node.color,
+                            border: borderColor
+                        },
+                        font: {
+                            color: 'black',
+                            size: node.id === 1 || node.id === 7 ? 16 : 14
+                        },
+                        shape: node.shape || 'dot'
+                    };
+                });
+
+                // Convert JSON edges to vis-network format
+                const visEdges = graphData.edges.map(edge => {
+                    const highlightColor = darkenColor(edge.color);
+                    return {
+                        from: edge.from,
+                        to: edge.to,
+                        label: edge.label,
+                        arrows: 'to',
+                        color: {
+                            color: edge.color,
+                            highlight: highlightColor
+                        }
+                    };
+                });
+
+                // Build edge details lookup
+                edgeDetails = {};
+                prerequisites = {};
+                graphData.edges.forEach(edge => {
+                    const fromNode = graphData.nodes.find(n => n.id === edge.from);
+                    const toNode = graphData.nodes.find(n => n.id === edge.to);
+                    const edgeKey = `${edge.from}-${edge.to}`;
+                    if (!prerequisites[edge.to]) {
+                        prerequisites[edge.to] = [];
+                    }
+                    prerequisites[edge.to].push(edge.from);
+                    edgeDetails[edgeKey] = {
+                        type: 'Edge',
+                        from: fromNode ? fromNode.label : `Node ${edge.from}`,
+                        to: toNode ? toNode.label : `Node ${edge.to}`,
+                        label: edge.label,
+                        weight: edge.weight || 1,
+                        description: edge.description
+                    };
+                });
+
+                // Build node details lookup
+                nodeDetails = {};
+                graphData.nodes.forEach(node => {
+                    nodeDetails[node.id] = {
+                        type: 'Node',
+                        name: node.label,
+                        description: node.description,
+                        properties: node.properties,
+                        connections: node.connections,
+                        resources: node.resources,
+                        prerequisites: prerequisites[node.id] || []
+                    };
+                });
+
+                // Create vis-network datasets
+                nodes = new vis.DataSet(visNodes);
+                edges = new vis.DataSet(visEdges);
+
+                // Initialize the network
+                initializeNetwork();
+            } catch (error) {
+                console.error('Error loading graph data:', error);
+                document.getElementById('graphNetwork').innerHTML = 
+                    '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #dc3545;">' +
+                    '<p>Error loading graph data. Please ensure graph-data.json is in the same directory and you are using a web server.</p>' +
+                    '</div>';
+            }
+        }
+
+        // Initialize the network visualization
+        function initializeNetwork() {
+            const container = document.getElementById('graphNetwork');
+            const data = {
+                nodes: nodes,
+                edges: edges
+            };
+
+            const options = {
+            nodes: {
+                shape: 'dot',
+                size: 30,
+                font: {
+                    size: 14,
+                    face: 'Arial'
+                },
+                borderWidth: 2,
+                shadow: true
+            },
+            edges: {
+                width: 2,
+                color: {
+                    color: '#667eea',
+                    highlight: '#764ba2'
+                },
+                smooth: {
+                    type: 'straightCross',
+                    roundness: 0
+                },
+                arrows: {
+                    to: {
+                        enabled: true,
+                        scaleFactor: 1.2
+                    }
+                },
+                font: {
+                    size: 12,
+                    align: 'middle',
+                    color: '#333'
+                },
+                labelHighlightBold: true
+            },
+            physics: {
+                enabled: true,
+                hierarchicalRepulsion: {
+                    centralGravity: 0.0,
+                    springLength: 200,
+                    springConstant: 0.01,
+                    nodeDistance: 250,
+                    damping: 0.09
+                },
+                stabilization: {
+                    enabled: true,
+                    iterations: 1000,
+                    fit: true
+                },
+                solver: 'hierarchicalRepulsion',
+                timestep: 0.5
+            },
+            layout: {
+                hierarchical: {
+                    enabled: true,
+                    levelSeparation: 250,
+                    nodeSpacing: 300,
+                    treeSpacing: 400,
+                    blockShifting: true,
+                    edgeMinimization: true,
+                    parentCentralization: true,
+                    direction: 'UD',
+                    sortMethod: 'directed',
+                    shakeTowards: 'leaves'
+                }
+            },
+            interaction: {
+                dragNodes: true,
+                dragView: true,
+                zoomView: true,
+                hover: true,
+                tooltipDelay: 200
+            }
+            };
+
+            network = new vis.Network(container, data, options);
+
+            // Disable physics after stabilization to lock nodes in place
+            network.once('stabilizationEnd', function() {
+                network.setOptions({ physics: { enabled: false } });
+            });
+
+            // Handle node clicks
+            network.on('click', function(params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                const node = nodes.get(nodeId);
+                showNodeDetails(nodeId, nodeDetails);
+            } else {
+                // Click on empty space - hide details
+                document.getElementById('detailsPanel').classList.remove('show');
+            }
+        });
+        }
+
+        // Function to show node details
+        function showNodeDetails(nodeId, nodeDetails) {
+            const details = nodeDetails[nodeId];
+            const panel = document.getElementById('detailsPanel');
+            const title = document.getElementById('detailsTitle');
+            const content = document.getElementById('detailsContent');
+            const resources = details.resources || {};
+
+            title.textContent = `${details.name}`;
+            
+            content.innerHTML = `
+                <div class="detail-item">
+                    <span class="detail-label">Description:</span>
+                    <span class="detail-value">${details.description}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Prerequisites:</span>
+                    <span class="detail-value">${details.prerequisites.map(prerequisite => nodeDetails[prerequisite].name).join(', ')}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Resources:</span>
+                    <span class="detail-value">${Object.keys(resources).map(key => `<a href="${details.resources[key]}" target="_blank">${key}</a>`).join(', ')}</span>
+                </div>
+            `;
+            panel.classList.add('show');
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Load graph data when page loads
+        loadGraphData();
+    </script>
+</body>
+</html>

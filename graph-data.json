@@ -1,0 +1,228 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Linear Algebra",
+      "color": "#667eea",
+      "description": "The study of vectors, matrices, and linear transformations",
+      "properties": ["Vectors", "Matrices", "Eigenvalues", "Linear transformations"],
+      "resources": {"Axler's Linear Algebra Done Right": "https://www.amazon.com/Linear-Algebra-Done-Right-Undergraduate/dp/0387982590"},
+      "connections": "Outgoing: Calculus"
+    },
+    {
+      "id": 2,
+      "label": "Calculus",
+      "color": "#764ba2",
+      "description": "The mathematical study of continuous change",
+      "properties": ["Derivatives", "Integrals", "Limits", "Differential equations"],
+      "resources": {"Calculus": "https://www.amazon.com/Calculus-Early-Transcendentals-James-Stewart/dp/0495011665"},
+      "connections": "Incoming: Linear Algebra | Outgoing: Classical Mechanics"
+    },
+    {
+      "id": 3,
+      "label": "Classical Mechanics",
+      "color": "#28a745",
+      "description": "The study of motion and forces (Newtonian mechanics)",
+      "properties": ["Kinematics", "Newton's laws", "Energy", "Momentum"],
+      "connections": "Incoming: Calculus"
+    },
+    {
+      "id": 4,
+      "label": "Quantum Mechanics for Finite Systems",
+      "color": "#007bff",
+      "description": "Quantum mechanics applied to systems with discrete, finite-dimensional Hilbert spaces",
+      "properties": ["Spin systems", "Qubits", "Finite-dimensional operators", "Matrix mechanics"],
+      "connections": ""
+    },
+    {
+      "id": 5,
+      "label": "Quantum Mechanics for Continuous Systems",
+      "color": "#17a2b8",
+      "description": "Quantum mechanics for systems with continuous degrees of freedom",
+      "properties": ["Wave functions", "Position and momentum", "Infinite-dimensional spaces", "Schrödinger equation"],
+      "connections": ""
+    },
+    {
+      "id": 6,
+      "label": "Group Theory",
+      "color": "#ff6b6b",
+      "description": "The mathematical study of symmetry through groups",
+      "properties": ["Symmetry groups", "Representations", "Group actions", "Subgroups"],
+      "connections": ""
+    },
+    {
+      "id": 7,
+      "label": "Differential Geometry",
+      "color": "#f093fb",
+      "description": "The study of geometry using calculus and linear algebra",
+      "properties": ["Manifolds", "Tensors", "Curvature", "Metric spaces"],
+      "connections": ""
+    },
+    {
+      "id": 8,
+      "label": "Classical Field Theory",
+      "color": "#ffa500",
+      "description": "Classical physics described by fields (e.g., electromagnetism, fluid dynamics)",
+      "properties": ["Field equations", "Lagrangian density", "Noether's theorem", "Conservation laws"],
+      "connections": ""
+    },
+    {
+      "id": 9,
+      "label": "Special Relativity",
+      "color": "#dc3545",
+      "description": "Einstein's theory of space-time for inertial frames",
+      "properties": ["Lorentz transformations", "Space-time", "Minkowski metric", "Time dilation"],
+      "connections": ""
+    },
+    {
+      "id": 10,
+      "label": "Classical Gauge Theory",
+      "color": "#6c757d",
+      "description": "Classical field theories with gauge symmetries",
+      "properties": ["Gauge fields", "Gauge transformations", "Yang-Mills theory", "Electromagnetism"],
+      "connections": ""
+    },
+    {
+      "id": 11,
+      "label": "Quantum Field Theory",
+      "color": "#20c997",
+      "description": "Quantum mechanics combined with special relativity and field theory",
+      "properties": ["Fock space", "Creation/annihilation operators", "Feynman diagrams", "Renormalization"],
+      "connections": ""
+    },
+    {
+      "id": 12,
+      "label": "Complex Analysis",
+      "color": "#fd7e14",
+      "description": "The study of functions of complex variables",
+      "properties": ["Analytic functions", "Contour integration", "Residue theorem", "Laurent series"],
+      "connections": ""
+    },
+    {
+      "id": 13,
+      "label": "Lie Theory",
+      "color": "#6610f2",
+      "description": "The study of continuous symmetry through Lie groups and Lie algebras",
+      "properties": ["Lie groups", "Lie algebras", "Representation theory", "Exponential map"],
+      "connections": ""
+    },
+    {
+      "id": 14,
+      "label": "General Relativity",
+      "color": "#e83e8c",
+      "description": "Einstein's theory of gravitation describing spacetime curvature",
+      "properties": ["Einstein field equations", "Spacetime curvature", "Gravitational waves", "Black holes"],
+      "connections": ""
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 4,
+      "color": "#667eea",
+      "description": "Linear algebra provides the mathematical framework for finite-dimensional quantum systems"
+    },
+    {
+      "from": 1,
+      "to": 7,
+      "color": "#667eea",
+      "description": "Linear algebra provides essential tools for differential geometry"
+    },
+    {
+      "from": 7,
+      "to": 14,
+      "color": "#f093fb",
+      "description": "Differential geometry is essential for understanding general relativity"
+    },
+    {
+      "from": 3,
+      "to": 8,
+      "color": "#28a745",
+      "description": "Classical field theory extends classical mechanics to continuous systems"
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "color": "#ffa500",
+      "description": "Classical gauge theory generalizes classical field theory with gauge symmetries"
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "color": "#007bff",
+      "description": "Quantum mechanics for continuous systems extends finite-dimensional quantum mechanics"
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "color": "#28a745",
+      "description": "Classical mechanics can be quantized to yield quantum mechanics for continuous systems"
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "color": "#764ba2",
+      "description": "Calculus tools are used extensively in classical mechanics"
+    },
+    {
+      "from": 6,
+      "to": 9,
+      "color": "#ff6b6b",
+      "description": "Group theory describes the symmetry groups underlying special relativity"
+    },
+    {
+      "from": 9,
+      "to": 14,
+      "color": "#dc3545",
+      "description": "General relativity extends special relativity to include gravity and curved spacetime"
+    },
+    {
+      "from": 6,
+      "to": 13,
+      "color": "#ff6b6b",
+      "description": "Group theory provides the foundation for Lie theory"
+    },
+    {
+      "from": 7,
+      "to": 13,
+      "color": "#f093fb",
+      "description": "Differential geometry provides the geometric structure for Lie groups and manifolds"
+    },
+    {
+      "from": 13,
+      "to": 10,
+      "color": "#6610f2",
+      "description": "Lie theory describes the gauge symmetries used in classical gauge theory"
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "color": "#6c757d",
+      "description": "Classical gauge theory can be quantized to yield quantum field theory"
+    },
+    {
+      "from": 2,
+      "to": 12,
+      "color": "#764ba2",
+      "description": "Calculus concepts support core techniques in complex analysis"
+    },
+    {
+      "from": 12,
+      "to": 11,
+      "color": "#fd7e14",
+      "description": "Complex analysis methods appear throughout quantum field theory"
+    },
+    {
+      "from": 2,
+      "to": 7,
+      "color": "#764ba2",
+      "description": "Calculus provides core tools used throughout differential geometry"
+    },
+    {
+      "from": 5,
+      "to": 11,
+      "color": "#17a2b8",
+      "description": "Quantum mechanics for continuous systems extends to quantum field theory"
+    }
+  ]
+}

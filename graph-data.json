@@ -4,27 +4,25 @@
       "id": 1,
       "label": "Linear Algebra",
       "color": "#667eea",
-      "description": "The study of vectors, matrices, and linear transformations",
-      "properties": ["Vectors", "Matrices", "Eigenvalues", "Linear transformations"],
-      "resources": {"Axler's Linear Algebra Done Right": "https://www.amazon.com/Linear-Algebra-Done-Right-Undergraduate/dp/0387982590"},
-      "connections": "Outgoing: Calculus"
+      "description": "This is the study of linear maps. These abstract objects form the natural language of quantum mechanics so it is essential for all aspiring physicists to learn this",
+      "resources": {
+        "Axler's Linear Algebra Done Right": "https://www.amazon.com/Linear-Algebra-Done-Right-Undergraduate/dp/0387982590",
+        "Strang's Linear Algebra Lectures": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/"
+      }
     },
     {
       "id": 2,
       "label": "Calculus",
       "color": "#764ba2",
-      "description": "The mathematical study of continuous change",
-      "properties": ["Derivatives", "Integrals", "Limits", "Differential equations"],
-      "resources": {"Calculus": "https://www.amazon.com/Calculus-Early-Transcendentals-James-Stewart/dp/0495011665"},
-      "connections": "Incoming: Linear Algebra | Outgoing: Classical Mechanics"
+      "description": "Calculus is all about how things with change with time so it is a crucial tool.",
+      "resources": {"Khan Academy": "https://www.khanacademy.org/math/calculus-1"}
     },
     {
       "id": 3,
       "label": "Classical Mechanics",
       "color": "#28a745",
-      "description": "The study of motion and forces (Newtonian mechanics)",
-      "properties": ["Kinematics", "Newton's laws", "Energy", "Momentum"],
-      "connections": "Incoming: Calculus"
+      "description": "You may have studied mechanics in school using the idea of forces. It turns out there are different ways to formulate mechanics using Lagranians and Hamiltonians",
+      "resources": {"The Theoretical Minimum: Classical Mechanics": "https://theoreticalminimum.com/courses/classical-mechanics/2011/fall"}
     },
     {
       "id": 4,
@@ -71,8 +69,7 @@
       "label": "Special Relativity",
       "color": "#dc3545",
       "description": "Einstein's theory of space-time for inertial frames",
-      "properties": ["Lorentz transformations", "Space-time", "Minkowski metric", "Time dilation"],
-      "connections": ""
+      "resources": {"The Theoretical Minimum: Special Relativity": "https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring"}
     },
     {
       "id": 10,

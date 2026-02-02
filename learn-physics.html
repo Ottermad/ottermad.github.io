@@ -4,38 +4,17 @@ layout: default
 <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
     <style>
-        /** {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }*/
-
         body {
-/*            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;*/
-/*            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-/*            padding: 20px;*/
         }
 
         .container {
-/*            background: white;*/
-/*            border-radius: 20px;*/
-/*            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);*/
-/*            padding: 40px;*/
-/*            max-width: 900px;*/
             width: 100%;
         }
-
-       /* h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-            text-align: center;
-        }*/
 
         .subtitle {
             color: #666;
@@ -119,6 +98,7 @@ layout: default
 
 
         <h1>So you want to learn theoretical physics?</h1>
+        <p>I was fornauate enough to read Susan Rigetti's amazing post <a href="https://www.susanrigetti.com/physics">So you want to learn physics</a>. It was super influential on me so I thought I would do my own version with a focus on the more theoretical/mathematical side of physics.</p>
         <p class="subtitle">Click on any node to see detailed information</p>
         
         <div class="chart-container">
@@ -216,7 +196,6 @@ layout: default
                         name: node.label,
                         description: node.description,
                         properties: node.properties,
-                        connections: node.connections,
                         resources: node.resources,
                         prerequisites: prerequisites[node.id] || []
                     };

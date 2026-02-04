@@ -22,47 +22,42 @@
       "label": "Classical Mechanics",
       "color": "#28a745",
       "description": "You may have studied mechanics in school using the idea of forces. It turns out there are different ways to formulate mechanics using Lagranians and Hamiltonians",
-      "resources": {"The Theoretical Minimum: Classical Mechanics": "https://theoreticalminimum.com/courses/classical-mechanics/2011/fall"}
+      "resources": {"The Theoretical Minimum: Classical Mechanics": "https://theoreticalminimum.com/courses/classical-mechanics/2011/fall", "David Tong's Notes": "https://www.damtp.cam.ac.uk/user/tong/dynamics.html"}
     },
     {
       "id": 4,
       "label": "Quantum Mechanics for Finite Systems",
       "color": "#007bff",
-      "description": "Quantum mechanics applied to systems with discrete, finite-dimensional Hilbert spaces",
-      "properties": ["Spin systems", "Qubits", "Finite-dimensional operators", "Matrix mechanics"],
-      "connections": ""
+      "description": "Quantum mechanics is hard. But I think it's best learnt by starting with simple systems like those that are used in quantum computing.",
+      "resources": {"Quantum Computation and Quantum Information": "https://www.amazon.co.uk/Quantum-Computation-Information-10th-Anniversary/dp/1107002176"}
     },
     {
       "id": 5,
       "label": "Quantum Mechanics for Continuous Systems",
       "color": "#17a2b8",
-      "description": "Quantum mechanics for systems with continuous degrees of freedom",
-      "properties": ["Wave functions", "Position and momentum", "Infinite-dimensional spaces", "Schrödinger equation"],
-      "connections": ""
+      "description": "With a better grasp of Classical Mechanics and finite dimensional quantum mechanics now you can study the quantum mechanics of particles.",
+      "resources": {"Introduction to Quantum Mechanics": "https://www.amazon.co.uk/Introduction-Quantum-Mechanics-David-Griffiths/dp/1107189632", "David Tong's Notes": "https://www.damtp.cam.ac.uk/user/tong/quantum.html"}
     },
     {
       "id": 6,
       "label": "Group Theory",
       "color": "#ff6b6b",
-      "description": "The mathematical study of symmetry through groups",
-      "properties": ["Symmetry groups", "Representations", "Group actions", "Subgroups"],
-      "connections": ""
+      "description": "Symmetries play a major role in physics and group theory gives us the tools to describe them",
+      "resources": {}
     },
     {
       "id": 7,
       "label": "Differential Geometry",
       "color": "#f093fb",
-      "description": "The study of geometry using calculus and linear algebra",
-      "properties": ["Manifolds", "Tensors", "Curvature", "Metric spaces"],
-      "connections": ""
+      "description": "This is using the tools from calculus to try understand shapes",
+      "resources": {"Introduction to Smooth Manifolds": "https://www.amazon.co.uk/Introduction-Smooth-Manifolds-Graduate-Mathematics/dp/1489994750", "Introduction to Geometry and Topology": "https://link.springer.com/book/10.1007/978-3-0348-0983-2", "Manifolds, Vector Fields, and Differential Forms": "https://link.springer.com/book/10.1007/978-3-031-25409-3"}
     },
     {
       "id": 8,
       "label": "Classical Field Theory",
       "color": "#ffa500",
       "description": "Classical physics described by fields (e.g., electromagnetism, fluid dynamics)",
-      "properties": ["Field equations", "Lagrangian density", "Noether's theorem", "Conservation laws"],
-      "connections": ""
+      "resources": {"Classical Dynamics of Particles and Systems": "https://www.amazon.co.uk/Classical-Dynamics-Particles-Systems-Thornton/dp/0534408966", "Classical Mechanics": "https://www.amazon.co.uk/Classical-Mechanics-Herbert-Goldstein/dp/8131758915"}
     },
     {
       "id": 9,
@@ -76,8 +71,7 @@
       "label": "Classical Gauge Theory",
       "color": "#6c757d",
       "description": "Classical field theories with gauge symmetries",
-      "properties": ["Gauge fields", "Gauge transformations", "Yang-Mills theory", "Electromagnetism"],
-      "connections": ""
+      "resources": {"Differential Geometry, Gauge Theories, and Gravity": "https://www.cambridge.org/core/books/differential-geometry-gauge-theories-and-gravity/2590331B00DB50D16192A96FFAFD1F8B"}
     },
     {
       "id": 11,

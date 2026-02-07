@@ -15,7 +15,7 @@
       "label": "Calculus",
       "color": "#764ba2",
       "description": "Calculus is all about how things with change with time so it is a crucial tool.",
-      "resources": {"Khan Academy": "https://www.khanacademy.org/math/calculus-1"}
+      "resources": {"Khan Academy Calculus 1": "https://www.khanacademy.org/math/calculus-1", "Khan Academy Calculus 2": "https://www.khanacademy.org/math/calculus-2", "Mathematical Methods for Physics and Engineering": "https://www.cambridge.org/core/books/mathematical-methods-for-physics-and-engineering/911A43AE1CF224743D32707FCC4AE0EB"}
     },
     {
       "id": 3,
@@ -43,7 +43,7 @@
       "label": "Group Theory",
       "color": "#ff6b6b",
       "description": "Symmetries play a major role in physics and group theory gives us the tools to describe them",
-      "resources": {}
+      "resources": {"Visual Group Theory": "https://www.amazon.co.uk/Visual-Group-Theory-Problem-Book/dp/088385757X"}
     },
     {
       "id": 7,
@@ -56,164 +56,164 @@
       "id": 8,
       "label": "Classical Field Theory",
       "color": "#ffa500",
-      "description": "Classical physics described by fields (e.g., electromagnetism, fluid dynamics)",
-      "resources": {"Classical Dynamics of Particles and Systems": "https://www.amazon.co.uk/Classical-Dynamics-Particles-Systems-Thornton/dp/0534408966", "Classical Mechanics": "https://www.amazon.co.uk/Classical-Mechanics-Herbert-Goldstein/dp/8131758915"}
+      "description": "We don't just want to understand particles, we would like to understand fields like the electromagenetic field",
+      "resources": {"Classical Dynamics of Particles and Systems": "https://www.amazon.co.uk/Classical-Dynamics-Particles-Systems-Thornton/dp/0534408966", "Classical Mechanics (especially section 12)": "https://www.amazon.co.uk/Classical-Mechanics-Herbert-Goldstein/dp/8131758915"}
     },
     {
       "id": 9,
       "label": "Special Relativity",
       "color": "#dc3545",
-      "description": "Einstein's theory of space-time for inertial frames",
+      "description": "Starting with the idea that the speed of light is constant, Einstein developed a beautiful theory about how things move",
       "resources": {"The Theoretical Minimum: Special Relativity": "https://theoreticalminimum.com/courses/special-relativity-and-electrodynamics/2012/spring"}
     },
     {
       "id": 10,
       "label": "Classical Gauge Theory",
       "color": "#6c757d",
-      "description": "Classical field theories with gauge symmetries",
-      "resources": {"Differential Geometry, Gauge Theories, and Gravity": "https://www.cambridge.org/core/books/differential-geometry-gauge-theories-and-gravity/2590331B00DB50D16192A96FFAFD1F8B"}
+      "description": "It turns out our fundamental theories of nature are a described by a special kind of theory called gauge theories",
+      "resources": {"Tong's Notes Ch 5": "https://www.damtp.cam.ac.uk/user/tong/em/electro.pdf", "Differential Geometry, Gauge Theories, and Gravity": "https://www.cambridge.org/core/books/differential-geometry-gauge-theories-and-gravity/2590331B00DB50D16192A96FFAFD1F8B","Geometry, Topology and Physics (Ch 1.8 and 10.5)": "https://www.amazon.co.uk/Geometry-Topology-Physics-Graduate-Student/dp/0750306068"}
     },
     {
       "id": 11,
       "label": "Quantum Field Theory",
       "color": "#20c997",
-      "description": "Quantum mechanics combined with special relativity and field theory",
-      "properties": ["Fock space", "Creation/annihilation operators", "Feynman diagrams", "Renormalization"],
-      "connections": ""
+      "description": "Quantum mechanics meets special relativity and gives us our best theories for everything that isn't gravity",
+      "resources": {"Quantum Field Theory": "https://www.amazon.co.uk/Quantum-Field-Theory-Mark-Srednicki/dp/0521864496"}
     },
     {
       "id": 12,
       "label": "Complex Analysis",
       "color": "#fd7e14",
-      "description": "The study of functions of complex variables",
-      "properties": ["Analytic functions", "Contour integration", "Residue theorem", "Laurent series"],
-      "connections": ""
+      "description": "This is calculus but with complex numbers and it turns out to very useful for calculating integrals",
+      "resources": {"Complex Analysis": "https://link.springer.com/book/10.1007/978-1-4419-7288-0"}
     },
     {
       "id": 13,
       "label": "Lie Theory",
       "color": "#6610f2",
-      "description": "The study of continuous symmetry through Lie groups and Lie algebras",
-      "properties": ["Lie groups", "Lie algebras", "Representation theory", "Exponential map"],
-      "connections": ""
+      "description": "In physics, we are often interested in continuous symmetries (like rotations) and this gives us the tools to study them.",
+      "resources": {"Naive Lie Theory": "https://www.amazon.co.uk/Naive-Theory-Undergraduate-Texts-Mathematics/dp/0387782141", "Lie Groups, Lie Algebras and Representations": "https://link.springer.com/book/10.1007/978-3-319-13467-3"}
     },
     {
       "id": 14,
       "label": "General Relativity",
       "color": "#e83e8c",
-      "description": "Einstein's theory of gravitation describing spacetime curvature",
-      "properties": ["Einstein field equations", "Spacetime curvature", "Gravitational waves", "Black holes"],
-      "connections": ""
+      "description": "Einstein's theory of gravitation which connects gravity and geometry",
+      "resources": {"Spacetime and Geometry": "https://www.amazon.co.uk/Spacetime-Geometry-Introduction-General-Relativity/dp/0805387323", "General Relativity": "https://www.amazon.co.uk/General-Relativity-Robert-M-Wald/dp/0226870332"}
+    },
+    {
+      "id": 15,
+      "label": "Representation Theory",
+      "color": "#e83e8c",
+      "description": "This is all about how groups and matrices interact",
+      "resources": {"Linear Representations of Finite Groups": "https://link.springer.com/book/10.1007/978-1-4684-9458-7", "Ed Segal's Notes": "https://www.homepages.ucl.ac.uk/%7Eucaheps/papers/Group%20Representation%20theory%202014.pdf"}
     }
   ],
   "edges": [
     {
       "from": 1,
       "to": 4,
-      "color": "#667eea",
-      "description": "Linear algebra provides the mathematical framework for finite-dimensional quantum systems"
+      "color": "#667eea"
     },
     {
       "from": 1,
       "to": 7,
-      "color": "#667eea",
-      "description": "Linear algebra provides essential tools for differential geometry"
+      "color": "#667eea"
     },
     {
       "from": 7,
       "to": 14,
-      "color": "#f093fb",
-      "description": "Differential geometry is essential for understanding general relativity"
+      "color": "#f093fb"
     },
     {
       "from": 3,
       "to": 8,
-      "color": "#28a745",
-      "description": "Classical field theory extends classical mechanics to continuous systems"
+      "color": "#28a745"
     },
     {
       "from": 8,
       "to": 10,
-      "color": "#ffa500",
-      "description": "Classical gauge theory generalizes classical field theory with gauge symmetries"
+      "color": "#ffa500"
     },
     {
       "from": 4,
       "to": 5,
-      "color": "#007bff",
-      "description": "Quantum mechanics for continuous systems extends finite-dimensional quantum mechanics"
+      "color": "#007bff"
     },
     {
       "from": 3,
       "to": 5,
-      "color": "#28a745",
-      "description": "Classical mechanics can be quantized to yield quantum mechanics for continuous systems"
+      "color": "#28a745"
     },
     {
       "from": 2,
       "to": 3,
-      "color": "#764ba2",
-      "description": "Calculus tools are used extensively in classical mechanics"
+      "color": "#764ba2"
     },
     {
       "from": 6,
       "to": 9,
-      "color": "#ff6b6b",
-      "description": "Group theory describes the symmetry groups underlying special relativity"
+      "color": "#ff6b6b"
     },
     {
       "from": 9,
       "to": 14,
-      "color": "#dc3545",
-      "description": "General relativity extends special relativity to include gravity and curved spacetime"
+      "color": "#dc3545"
     },
     {
       "from": 6,
-      "to": 13,
-      "color": "#ff6b6b",
-      "description": "Group theory provides the foundation for Lie theory"
+      "to": 15,
+      "color": "#ff6b6b"
     },
     {
       "from": 7,
       "to": 13,
-      "color": "#f093fb",
-      "description": "Differential geometry provides the geometric structure for Lie groups and manifolds"
+      "color": "#f093fb"
+    },
+    {
+      "from": 15,
+      "to": 13,
+      "color": "#f093fb"
     },
     {
       "from": 13,
       "to": 10,
-      "color": "#6610f2",
-      "description": "Lie theory describes the gauge symmetries used in classical gauge theory"
+      "color": "#6610f2"
     },
     {
       "from": 10,
       "to": 11,
-      "color": "#6c757d",
-      "description": "Classical gauge theory can be quantized to yield quantum field theory"
+      "color": "#6c757d"
     },
     {
       "from": 2,
       "to": 12,
-      "color": "#764ba2",
-      "description": "Calculus concepts support core techniques in complex analysis"
+      "color": "#764ba2"
     },
     {
       "from": 12,
       "to": 11,
-      "color": "#fd7e14",
-      "description": "Complex analysis methods appear throughout quantum field theory"
+      "color": "#fd7e14"
     },
     {
       "from": 2,
       "to": 7,
-      "color": "#764ba2",
-      "description": "Calculus provides core tools used throughout differential geometry"
+      "color": "#764ba2"
     },
     {
       "from": 5,
       "to": 11,
-      "color": "#17a2b8",
-      "description": "Quantum mechanics for continuous systems extends to quantum field theory"
+      "color": "#17a2b8"
+    },
+    {
+      "from": 1,
+      "to": 15,
+      "color": "#f093fb"
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "color": "#f093fb"
     }
   ]
 }

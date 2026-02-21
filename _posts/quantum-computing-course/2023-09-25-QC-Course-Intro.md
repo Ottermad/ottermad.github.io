@@ -48,3 +48,14 @@ Here are links to all the course posts in order so please jump in. Please reach 
 * [Qiskit]({% post_url 2023-09-24-QC-Course-Qiskit %})
 * [Teleportation]({% post_url 2023-12-22-QC-Course-Teleportation %})
 * [Quantum Key Distribution]({% post_url 2024-01-08-QC-Course-Quantum-Key-Distribution %})
+
+### Shor's Algorithm (ongoing)
+* [Introduction to Shor's Algorithm]({% post_url 2024-06-09-QC-Course-Shors-Algorithm-Pt1 %})
+* [Introduction to number theory]({% post_url 2024-06-16-QC-Course-Shors-Algorithm-Pt2 %})
+* [Introduction to RSA]({% post_url 2024-06-23-QC-Course-Shors-Algorithm-Pt3 %})
+* [Using Order Finding]({% post_url 2024-06-29-QC-Course-Shors-Algorithm-Pt4 %})
+* [Euclid's Algorithm]({% post_url 2024-07-05-QC-Course-Shors-Algorithm-Pt5 %})
+* [Order Finding Using Phase Estimation]({% post_url 2024-07-15-QC-Course-Shors-Algorithm-Pt6 %})
+* [Phase Estimation]({% post_url 2024-07-17-QC-Course-Shors-Algorithm-Pt7 %})
+* [Quantum Fourier Transform]({% post_url 2026-02-21-QC-Course-Shors-Algorithm-Pt8 %})
+

@@ -9,3 +9,15 @@ In this series of posts, we're exploring a famous algorithm called Shor's Algori
 $$CU^j \ket{j} \ket{s} = \ket{j}U^j\ket{s}$$ 
 
 e.g. it runs U j times for an input j and doesn't change j. We can do this using a process called modular exponentiation which is what we're going to discuss in this post.
+<<<<<<< HEAD
+=======
+
+Specifically, for us we have
+
+$$U\ket{y} = \ket{(xy) \mod N}$$
+
+So 
+
+$$CU^j \ket{j} \ket{s} = \ket{j}\ket{x^j s \mod N}$$ 
+
+>>>>>>> c3c8236bce9086c0becaa11faa48f845b278ab2d

@@ -4,7 +4,7 @@ title: A better way to calculate the Fibonacci Numbers
 author: Charles Thomas
 ---
 
-You might have heard of the fibonacci numbers (don't worry if you've haven't - we'll explain them below) but did you know we there is a way of calculating them without having to use recursion called Bidet's formula.
+You might have heard of the Fibonacci numbers (don't worry if you've haven't - we'll explain them below) but did you know we there is a way of calculating them without having to use recursion called Bidet's formula.
 
 # What are the Fibonacci numbers?
 The Fibonacci numbers are the sequence of numbers: 

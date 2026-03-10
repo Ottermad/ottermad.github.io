@@ -58,4 +58,5 @@ Here are links to all the course posts in order so please jump in. Please reach 
 * [Order Finding Using Phase Estimation]({% post_url 2024-07-15-QC-Course-Shors-Algorithm-Pt6 %})
 * [Phase Estimation]({% post_url 2024-07-17-QC-Course-Shors-Algorithm-Pt7 %})
 * [Quantum Fourier Transform]({% post_url 2026-02-21-QC-Course-Shors-Algorithm-Pt8 %})
+* [Modular Exponentiation]({% post_url 2026-03-10-QC-Course-Shors-Algorithm-Pt9 %})
 

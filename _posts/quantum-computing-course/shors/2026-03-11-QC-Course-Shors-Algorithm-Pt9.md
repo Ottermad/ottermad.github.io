@@ -44,11 +44,11 @@ Finally, we only have to multiply $$x^j \mod N$$ and $$s \mod N$$ together.
 
 Now, we can compute $$x^{2^n} \mod N$$ for some n by repeatedly squaring. 
 
-We compute $$x^2 \mod N$$ by squaring $$x\mod N$$
+We compute $$x^2 \mod N$$ by squaring $$x\mod N$$.
 
-Then we square $$x^2 \mod N$$ to get $$x^4 \mod N$$ 
+Then we square $$x^2 \mod N$$ to get $$x^4 \mod N$$. 
 
-And we keep repeating this until get  $$x^{2^n} \mod N$$
+And we keep repeating this until get  $$x^{2^n} \mod N$$.
 
 This process of repeated squaring is known as modular exponentiation and allows us to compute $$x^j \mod N$$ easily.
 
